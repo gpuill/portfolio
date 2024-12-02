@@ -1,0 +1,32 @@
+$base-noir-1: #222222;
+$base-ecriture-fond-noir: #fefefe;
+
+
+body{
+    margin: 0px;
+
+
+    header{
+        nav{
+            background-color: $base-noir-1;
+            padding: 5px 10px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            height: 100px;
+            a{
+                color: $base-ecriture-fond-noir;
+                text-decoration: none;
+                background-color: $base-noir-1;
+                &:hover{
+                    background-color: $base-noir-1;
+                    transform: scale(1.2);
+                    transition: all 0.5s;
+                }
+            } 
+    
+        }
+    }
+
+    
+}
