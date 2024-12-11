@@ -4,29 +4,82 @@ $base-ecriture-fond-noir: #fefefe;
 
 body{
     margin: 0px;
-
-
     header{
+        position: sticky;
+        top: 0;
+        margin: 0 0 2px 0;
+        /* Exemple de SCSS pour agrandir le tooltip */
+        .u-tooltip {
+            font-size: 1rem;          // Taille de la police du texte du tooltip
+            padding: 8px 12px;        // Espace interne autour du texte
+            max-width: 200px;         // Largeur maximale du tooltip
+            white-space: normal;      // Permet le retour à la ligne si le texte est long
+        
+            /* Optionnel : Personnaliser la flèche */
+        .u-tooltip__arrow {
+            width: 12px;
+            height: 12px;
+            }
+        }
+        
         nav{
             background-color: $base-noir-1;
             padding: 5px 10px;
             display: flex;
             align-items: center;
-            gap: 20px;
+            gap: 30px;
             height: 100px;
+            justify-content: center;
             a{
                 color: $base-ecriture-fond-noir;
                 text-decoration: none;
                 background-color: $base-noir-1;
+                font-size: 22px;
+                padding: 2px;
                 &:hover{
                     background-color: $base-noir-1;
-                    transform: scale(1.2);
-                    transition: all 0.5s;
+                    transform: scale(1.05);
+                    transition: all 0.3s;
+                }
+                img{
+                    border: 1px solid $base-ecriture-fond-noir;
+                    border-radius: 5px;
                 }
             } 
-    
         }
     }
-
-    
+    main{
+        div.main-hello{
+            padding: 10rem;
+            display: flex;
+            text-align: end;
+            justify-content: flex-end;
+            h1{
+                text-decoration: overline solid $base-ecriture-fond-noir;
+                font-size: 4rem;
+                width: fit-content;
+            }
+        }
+        P.remplissage{
+            text-wrap: wrap;
+            width: 5%;
+            background-color: #ffffff;
+            color: black;
+            font-size: 2rem;
+        }
+        div.main-content{
+            width: 100%;
+            div.grid{
+            display: grid;
+                img{
+                    grid-column: 1/2;
+                    height: 100px;
+                    width: 100%;
+                }
+                p{
+                    grid-column: 2/2;
+                }
+            }
+        }
+    }
 }

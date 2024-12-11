@@ -8,5 +8,15 @@
 </template>
 
 <script setup>
+import { useHead } from '@vueuse/head';
+
+useHead({
+    title: 'Titre personnalisé de la page',
+    meta: [
+        { name: 'description', content: 'Description de la page' }
+    ]
+});
+
+
 const { data: posts, pending, error, refresh } = await useFetch('https://jsonplaceholder.typicode.com/posts')
 </script>
