@@ -27,7 +27,7 @@ body{
             padding: 5px 10px;
             display: flex;
             align-items: center;
-            gap: 30px;
+            gap: 2rem;
             height: 100px;
             justify-content: center;
             a{
@@ -36,6 +36,7 @@ body{
                 background-color: $base-noir-1;
                 font-size: 22px;
                 padding: 2px;
+                font-size: 1rem;
                 &:hover{
                     background-color: $base-noir-1;
                     transform: scale(1.05);
@@ -44,6 +45,7 @@ body{
                 img{
                     border: 1px solid $base-ecriture-fond-noir;
                     border-radius: 5px;
+                    min-width: 50px;
                 }
             } 
         }

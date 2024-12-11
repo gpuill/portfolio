@@ -1,7 +1,7 @@
 <template>
     <main>
         <div class="main-hello">
-            <h1>Bonjour</h1>
+            <h1 class="sm:bg-black xl:bg-red-300">Bonjour</h1>
         </div>
         <div class="main-content">
             <div class="grid">
