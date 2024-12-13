@@ -4,6 +4,7 @@
     <NuxtLoadingIndicator />
     <Header />
     <NuxtPage />
+    <Footer />
   </div>
 </template>
 
