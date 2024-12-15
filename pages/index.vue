@@ -1,5 +1,5 @@
 <template>
-    <main>
+    <main class="bg-zinc-900">
         <div class="main-hello">
             <h1 class="sm:bg-black xl:bg-red-300">Bonjour</h1>
         </div>
@@ -8,11 +8,19 @@
                 <img src="/assets/images/moi.png" alt="Photo contractuel" name="Photo contractuel">
                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa totam, libero, commodi pariatur dolorum amet non, omnis quod sed eos saepe nobis iure? Omnis suscipit asperiores sequi placeat voluptate amet?</p>
             </div>
+            <div class="para-presa">
+                <p class="bg-zinc-700 text-2xl font-sans tracking-widest leading-8 max-w-6xl">
+                    Bonjour et bienvenue sur mon portfolio, vous pourrez y retrouvés mes projets, une explication des compétences que j'ai pus acquérir au cours de mon BUT et quelque pages que j'ai réaliser pour passer le temps.
+                </p>
+            </div>
         </div>
-        <p class="remplissage">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis omnis inventore molestias molestiae quis a! Odit, deserunt laboriosam dignissimos magni delectus vel doloribus voluptatum eligendi eius voluptate, aperiam, earum eveniet. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio nobis consectetur repudiandae voluptas labore fugiat at quis aliquam! Voluptates cum voluptas maiores fugiat officia facilis reiciendis nam corporis accusantium in?</p>
+        
+
     </main>
 
 </template>
+
+
 
 <script setup>
 import { useHead } from '@vueuse/head';

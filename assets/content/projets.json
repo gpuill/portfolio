@@ -1,0 +1,67 @@
+[
+    {
+        "id":0,
+        "formation":"BUT ou autre",
+        "annee":1,
+        "nom":"Nom d'exemple du projet",
+        "github":"https://github.com/gpuill/portfolio",
+        "resume":"resume qui sera afficher pour expliquer brievement",
+        "description": "Long texte sans partie",
+        "technologie":["Html","CSS","JavaScript","Python","PostgreSQL","Java","PHP","Vue.js","Nuxt","Symfony"],
+        "main-color":"#FFFFFF",
+        "secondary-color":"#FFFFFF",
+        "logo":"chemin internet ou local"
+    },
+    {
+        "id":1,
+        "formation":"BUT ou autre",
+        "annee":1,
+        "nom":"Nom d'exemple du projet",
+        "github":"https://github.com/gpuill/portfolio",
+        "resume":"resume qui sera afficher pour expliquer brievement",
+        "description": "Long texte sans partie",
+        "technologie":["Html","CSS","JavaScript","Python","PostgreSQL","Java","PHP","Vue.js","Nuxt","Symfony"],
+        "main-color":"#FFFFFF",
+        "secondary-color":"#FFFFFF",
+        "logo":"chemin internet ou local"
+    },
+    {
+        "id":2,
+        "formation":"BUT ou autre",
+        "annee":1,
+        "nom":"Nom d'exemple du projet",
+        "github":"https://github.com/gpuill/portfolio",
+        "resume":"resume qui sera afficher pour expliquer brievement",
+        "description": "Long texte sans partie",
+        "technologie":["Html","CSS","JavaScript","Python","PostgreSQL","Java","PHP","Vue.js","Nuxt","Symfony"],
+        "main-color":"#FFFFFF",
+        "secondary-color":"#FFFFFF",
+        "logo":"chemin internet ou local"
+    },
+    {
+        "id":3,
+        "formation":"BUT ou autre",
+        "annee":1,
+        "nom":"Nom d'exemple du projet",
+        "github":"https://github.com/gpuill/portfolio",
+        "resume":"resume qui sera afficher pour expliquer brievement",
+        "description": "Long texte sans partie",
+        "technologie":["Html","CSS","JavaScript","Python","PostgreSQL","Java","PHP","Vue.js","Nuxt","Symfony"],
+        "main-color":"#FFFFFF",
+        "secondary-color":"#FFFFFF",
+        "logo":"chemin internet ou local"
+    },
+    {
+        "id":4,
+        "formation":"BUT ou autre",
+        "annee":1,
+        "nom":"Nom d'exemple du projet",
+        "github":"https://github.com/gpuill/portfolio",
+        "resume":"resume qui sera afficher pour expliquer brievement",
+        "description": "Long texte sans partie",
+        "technologie":["Html","CSS","JavaScript","Python","PostgreSQL","Java","PHP","Vue.js","Nuxt","Symfony"],
+        "main-color":"#FFFFFF",
+        "secondary-color":"#FFFFFF",
+        "logo":"chemin internet ou local"
+    }
+]

@@ -17,13 +17,6 @@ body{
                 width: fit-content;
             }
         }
-        P.remplissage{
-            text-wrap: wrap;
-            width: 5%;
-            background-color: #ffffff;
-            color: black;
-            font-size: 2rem;
-        }
         div.main-content{
             width: 100%;
             div.grid{
@@ -35,6 +28,17 @@ body{
                 }
                 p{
                     grid-column: 2/2;
+                }
+            }
+
+            div.para-presa{
+                display: flex;
+                margin: 0;
+                padding: 10vh 10vw;
+                justify-content: center;
+                p{
+                    padding: 2vh 5vw;
+                    border-radius: 1rem;
                 }
             }
         }
