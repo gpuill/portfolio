@@ -1,10 +1,15 @@
+main{
+    display: flex;
+    justify-content: center;
+}
+
 .project-container {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
     padding: 1rem;
-    width:50vw;
+    width:60vw;
     gap: 1.5rem; // Espacement entre les lignes de projet
 }
 

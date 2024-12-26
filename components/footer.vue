@@ -1,7 +1,7 @@
 <template>
     <footer class="bg-lime-950">
         <UTooltip text="Accueil" :popper="{ arrow: true }">
-            <NuxtLink to="/"><img src="/assets/images/GP_grandformat.png" ></NuxtLink>
+            <NuxtLink to="/"><img src="/static/images/GP_grandformat.png" ></NuxtLink>
         </UTooltip>
         <div class="menu_wrap">
 

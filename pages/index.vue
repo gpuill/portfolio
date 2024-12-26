@@ -5,7 +5,7 @@
         </div>
         <div class="main-content">
             <div class="grid">
-                <img src="/assets/images/moi.png" alt="Photo contractuel" name="Photo contractuel">
+                <img src="~/assets/images/moi.png" alt="Photo contractuel" name="Photo contractuel">
                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa totam, libero, commodi pariatur dolorum amet non, omnis quod sed eos saepe nobis iure? Omnis suscipit asperiores sequi placeat voluptate amet?</p>
             </div>
             <div class="para-presa">
