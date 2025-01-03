@@ -4,6 +4,7 @@
             <h1>Mes Projets</h1>
             <div class="project-container">
                 <div v-for="projet in projets" :key="projet.id" class="project-row">
+
                     <project-card :formation="projet.formation" :annee="projet.annee" :nom="projet.nom"
                         :github="projet.github" :resume="projet.resume" :technologie="projet.technologie"
                         :mainColor="projet['main-color']" :secondaryColor="projet['secondary-color']" :logo="projet.logo" />
