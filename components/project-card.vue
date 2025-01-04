@@ -5,7 +5,7 @@
             <img v-else :src="`/static/images/icons/${topTechnologies[0]}-icon.png`" :alt="nom" class="project-logo" :style="{ backgroundColor: mainColor, borderColor: secondaryColor }"/>
             <h2>{{ nom }}</h2>
         </div>
-        <div class="tags-container">
+        <div class="tags-container" :style="{ backgroundColor: mainColor, borderColor: secondaryColor }">
 
         </div>
         <p class="project-resume">{{ resume }}</p>
