@@ -47,6 +47,84 @@
         height: 70px;
         border: 4px solid;
         border-radius: 1rem;
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        flex-wrap: nowrap;
+
+        .tag-wrapper {
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: auto;
+            padding: 0 1rem;
+
+            svg {
+                display: block;
+                height: 2.5em;
+            }
+
+            span {
+                position: absolute;
+                color: white;
+                font-size: 1em;
+                font-weight: bold;
+                text-align: center;
+                user-select: none;
+                &:hover{
+                    cursor: pointer;
+                    text-decoration: underline;
+                }
+            }
+
+            /*Les compétences DU BUT */
+            &[data-skill="Réaliser"] {
+                color: #BF0606; // Une autre couleur personnalisée
+                svg{
+                    width: 140px;
+                }
+            }
+            
+            &[data-skill="Optimiser"] {
+                color: #ED8C51; // Couleur personnalisée
+                svg{
+                    width: 140px;
+                }
+            }
+            
+            &[data-skill="Administrer"] {
+                color: #EFBA11; // Couleur personnalisée
+                svg{
+                    width: 140px;
+                }
+            }
+
+            &[data-skill="Gérer"] {
+                color: #92BF4E; // Une autre couleur personnalisée
+                svg{
+                    width: 140px;
+                }
+            }
+
+            
+            &[data-skill="Conduire"] {
+                color: #0A215E; // Couleur personnalisée
+                svg{
+                    width: 140px;
+                }
+            }
+
+
+            
+            &[data-skill="Collaborer"] {
+                color: #0F0F0F; // Couleur personnalisée
+                svg{
+                    width: 140px;
+                }
+            }
+
+        }          
     }
 
     .project-resume{

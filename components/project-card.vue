@@ -7,6 +7,16 @@
         </div>
         <div class="tags-container" :style="{ backgroundColor: mainColor, borderColor: secondaryColor }">
 
+            <div v-for="(comp, index) in competences" :key="index" class="tag-wrapper" :data-skill="comp">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 40" class="tag">
+                    <path d="M0 0 L180 0 L200 20 L180 40 L0 40 L20 20 Z" fill="currentColor" stroke="white" stroke-width="3" />
+                    <circle cx="90%" cy="20" r="5" fill="white" />
+                </svg>
+                <span>{{ comp }}</span>
+            </div>  
+
+
+
         </div>
         <p class="project-resume">{{ resume }}</p>
         <div class="project-technologies">
@@ -34,13 +44,15 @@ export default {
         technologie: Array,
         mainColor: String,
         secondaryColor: String,
-        logo: String
+        logo: String,
+        competences: Array
     },
     computed: {
         topTechnologies() {
             // Retourne les trois premières technologies
             return this.technologie.slice(0, 3);
         }
+
     },
     methods: {
         getTechIcon(tech) {
