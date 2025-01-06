@@ -4,9 +4,28 @@
             <NuxtLink to="/"><img src="/static/images/GP_grandformat.png" ></NuxtLink>
         </UTooltip>
         <div class="menu_wrap">
-
+            <NuxtLink to="/projets">
+                <span>Projets</span>
+            </NuxtLink>
+            <NuxtLink to="/competences">
+                <span>Compétences</span>
+            </NuxtLink>
+            <NuxtLink to="/Contact">
+                <span>Contact</span>
+            </NuxtLink>
+            <NuxtLink to="/about">
+                <span>À propos</span>
+            </NuxtLink>
         </div>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum commodi, recusandae molestias tempora sequi vero ratione totam quae, dolorum aliquam beatae minus consequatur? Aspernatur perferendis ipsum, reprehenderit provident possimus distinctio.</p>
+        <div class="media_wrap">
+            <NuxtLink to="https://github.com/gpuill">
+                <img src="/static/images/icons/github-icon.svg" alt="Github personnel">
+            </NuxtLink>
+            <NuxtLink to="">
+                <img src="/static/images/icons/linkedin-icon.svg" alt="Linkedin">
+            </NuxtLink>
+            <NuxtLink to=""></NuxtLink>
+        </div>
     </footer>
 </template>
 

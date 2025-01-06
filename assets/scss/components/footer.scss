@@ -3,5 +3,31 @@ $base-ecriture-fond-noir: #fefefe;
 
 footer{
     width: 100%;
-    padding: 1vh 1vw;
+    padding: 10vh 10vw;
+    display: grid;
+    grid-template-columns: repeat(3,auto);
+    grid-template-rows: 1;
+    align-content: center;
+    &>div{
+        display: block;
+        
+    }
+    .menu_wrap{
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        gap: 10px;
+        font-size: 1rem;
+        font-weight: bold;
+    }
+    .media_wrap{
+        a{
+            img{
+                width: auto;
+                height: auto;
+                max-width: 5rem;
+                max-height: 5rem;
+            }
+        }
+    }
 }

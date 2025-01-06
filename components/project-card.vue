@@ -8,7 +8,7 @@
         <div class="tags-container" :style="{ backgroundColor: mainColor, borderColor: secondaryColor }">
 
             <div v-for="(comp, index) in competences" :key="index" class="tag-wrapper" :data-skill="comp">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 40" class="tag">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 40" class="tag" preserveAspectRatio="xMinYMin meet">
                     <path d="M0 0 L180 0 L200 20 L180 40 L0 40 L20 20 Z" fill="currentColor" stroke="white" stroke-width="3" />
                     <circle cx="90%" cy="20" r="5" fill="white" />
                 </svg>

@@ -1,3 +1,9 @@
+$base-noir-1: #222222;
+$base-ecriture-fond-noir: #fefefe;
+$layout-breakpoint-small: 768px;
+$layout-breakpoint-medium: 1440px;
+
+
 .project-card {
     /* Les infos flex */
     display: flex;
@@ -41,7 +47,52 @@
             border-radius: 0.45rem;
         }
     }
+    .tag-wrapper {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        margin: 0.5em;
 
+        svg {
+          width: 100%; // Par défaut, occupe tout l'espace disponible
+          height: auto; // Ajuste proportionnellement
+          max-width: 200px; // Limite la taille maximale
+        }
+
+        span {
+            position: absolute;
+            font-size: 1em; // Taille de base du texte
+            font-weight: bold;
+            text-align: center;
+            user-select: none;
+        }
+    }
+    
+    @media screen and (max-width: 768px) {
+        .tag-wrapper {
+            svg {
+                max-width: 150px; // Réduit la taille maximale du SVG pour les tablettes
+            }
+        
+            span {
+                font-size: 0.85em; // Réduit légèrement la taille du texte
+            }
+        }
+    }
+      
+    @media screen and (max-width: 480px) {
+        .tag-wrapper {
+        svg {
+            max-width: 100px; // Réduction supplémentaire pour les petits écrans
+        }
+    
+        span {
+            font-size: 0.7em; // Réduction de la taille du texte
+        }
+        }
+    }
+    
     .tags-container{
         width: 100%;
         height: 70px;
@@ -49,8 +100,9 @@
         border-radius: 1rem;
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: space-around;
         flex-wrap: nowrap;
+        padding: 0 0.5rem;
 
         .tag-wrapper {
             position: relative;
@@ -63,6 +115,10 @@
                 display: block;
                 width: 7.5rem;
             }
+            
+
+
+
 
             span {
                 position: absolute;
@@ -99,13 +155,21 @@
                 color: #0A215E; // Couleur personnalisée
             }
 
-
-            
             &[data-skill="Collaborer"] {
                 color: #0F0F0F; // Couleur personnalisée
             }
 
-        }          
+        }     
+        @media (max-width: $layout-breakpoint-medium) {
+            .tag-wrapper{
+                svg{
+                    width: 85px;
+                }
+                span{
+                    font-size: 0.7rem;
+                }
+            }
+        }     
     }
 
     .project-resume{
