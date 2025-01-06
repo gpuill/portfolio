@@ -187,17 +187,26 @@ $layout-breakpoint-medium: 1440px;
         gap: 1rem;
         margin-top: 1rem;
         width: 100%;
-    
+
         .all-technos{
             display: flex;
             flex-direction: row;
             justify-content: space-evenly;
             align-items: center;
-            width: 100%;
+            max-width: 100%;
+            width: auto;
+            padding: 1vh 2vw;
+            border-radius: 4px;
+            
             .technology-icon {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
+                width: 50px;
+                height: 50px;
+                padding: 3px;
+                border: 2px solid;
+                border-radius: 0.25rem;
             }
         }
 
@@ -207,15 +216,13 @@ $layout-breakpoint-medium: 1440px;
             width: 43px;
             height: 43px;
             padding: 3px;
-            border-radius: 4px;
-            background-color: #ffffff80;
         }
 
         .github-link {
             width: 30%;
             img{
-                width: 59px;
-                height: 59px;
+                width: 50px;
+                height: 50px;
                 padding: 3px;
                 transition: all 0.3s;
                 background-color: #00000050;

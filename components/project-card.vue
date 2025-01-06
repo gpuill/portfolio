@@ -19,13 +19,15 @@
 
         </div>
         <p class="project-resume">{{ resume }}</p>
-        <div class="project-technologies">
+        <div class="project-technologies" :style="{ filter: `drop-shadow(0px 0px 2rem ${mainColor})` }">
             <div class="all-technos">
-                <div v-for="(tech, index) in topTechnologies" :key="index" class="technology-icon">
+                <div v-for="(tech, index) in topTechnologies" :key="index" class="technology-icon" :style="{ borderColor: secondaryColor }">
                     <img :src="`/static/images/icons/${tech}-icon.png`" :alt="tech" />
                 </div>  
             </div>
-            <a v-if="github" :href="github" class="github-link"><img :src="`/static/images/icons/github-icon.png`" :alt="`Lien github vers le projet ${nom}`"></a>
+            <a v-if="github" :href="github" class="github-link">
+                <img :src="`/static/images/icons/github-icon.png`" :alt="`Lien github vers le projet ${nom}`">
+            </a>
             <img v-else class="no-github-image" src="/static/images/icons/no-github-icon.png" alt="">
         </div>
         
