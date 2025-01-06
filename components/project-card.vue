@@ -59,7 +59,6 @@ export default {
             try {
                 // Import dynamique des icônes
                 return new URL(`@/assets/images/icons/${tech}-icon.png`, import.meta.url).href;
-
             } catch (e) {
                 // Icône par défaut en cas d'erreur
                 return new URL('/assets/images/icons/default-icon.png', import.meta.url).href;
