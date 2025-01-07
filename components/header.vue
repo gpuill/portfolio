@@ -7,14 +7,15 @@
                 <NuxtLink to="/">
                     <NuxtImg
                     preload 
-                    class="min-w-16 max-h-16 p-2"
-                    src="/static/images/logo_guillaume.png"
+                    class="min-w-16 max-h-20 w-full p-2"
+                    src="/static/images/logo_guillaume.svg"
                     densities="x1"
                     loading="lazy"
                     />
                 </NuxtLink>
             </UTooltip>
             <NuxtLink class="hover:ease hover:bg-zinc-700 sm: mn-none" to="/contact">Contact</NuxtLink>
+            <NuxtLink class="hover:ease hover:bg-zinc-700 sm: mn-none" to="/About">Contact</NuxtLink>
         </nav>
     </header>
 </template>
