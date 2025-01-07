@@ -1,9 +1,9 @@
 <template>
-    <div class="project-card" :style="{ backgroundColor: mainColor, borderColor: secondaryColor }">
+    <div class="project-card min-w-80 " :style="{ backgroundColor: mainColor, borderColor: secondaryColor }">
         <div class="project-header">
             <img v-if="logo" :src="logo" :alt="nom" class="project-logo" :style="{ backgroundColor: mainColor, borderColor: secondaryColor }"/>
             <img v-else :src="`/static/images/icons/${topTechnologies[0]}-icon.png`" :alt="nom" class="project-logo" :style="{ backgroundColor: mainColor, borderColor: secondaryColor }"/>
-            <h2>{{ nom }}</h2>
+            <h2 class="">{{ nom }}</h2>
         </div>
         <div class="tags-container" :style="{ backgroundColor: mainColor, borderColor: secondaryColor }">
 
@@ -26,7 +26,14 @@
                 </div>  
             </div>
             <a v-if="github" :href="github" class="github-link">
-                <img :src="`/static/images/icons/github-icon.png`" :alt="`Lien github vers le projet ${nom}`">
+                <NuxtImg
+                    src="/static/images/icons/github-icon.png"
+                    height="50"
+                    densities="x1"
+                    
+                    />
+
+
             </a>
             <img v-else class="no-github-image" src="/static/images/icons/no-github-icon.png" alt="">
         </div>
