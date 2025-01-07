@@ -30,7 +30,6 @@
                     src="/static/images/icons/github-icon.png"
                     height="50"
                     densities="x1"
-                    
                     />
 
 

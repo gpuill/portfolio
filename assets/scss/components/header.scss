@@ -32,7 +32,7 @@ header{
             img{
                 border: 1px solid $base-ecriture-fond-noir;
                 border-radius: 5px;
-                min-width: 50px;
+                height: fit-content;
             }
         } 
     }
