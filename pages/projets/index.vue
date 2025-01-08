@@ -17,6 +17,7 @@
 import ProjectCard from '@/components/project-card.vue'
 import projets from '@/assets/content/projets.json'
 
+
 export default {
     components: {
         ProjectCard

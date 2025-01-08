@@ -15,7 +15,7 @@
                 </NuxtLink>
             </UTooltip>
             <NuxtLink class="hover:ease hover:bg-zinc-700 sm: mn-none" to="/contact">Contact</NuxtLink>
-            <NuxtLink class="hover:ease hover:bg-zinc-700 sm: mn-none" to="/About">Contact</NuxtLink>
+            <NuxtLink class="hover:ease hover:bg-zinc-700 sm: mn-none" to="/About">À propos</NuxtLink>
         </nav>
     </header>
 </template>

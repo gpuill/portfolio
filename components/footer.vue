@@ -16,6 +16,9 @@
             <NuxtLink to="/about">
                 <span>À propos</span>
             </NuxtLink>
+            <NuxtLink to="/lore">
+                <span>Le lore</span>
+            </NuxtLink>
         </div>
         <div class="media_wrap">
             <NuxtLink to="https://github.com/gpuill">

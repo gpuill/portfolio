@@ -9,7 +9,6 @@ export default defineNuxtConfig({
     '@nuxt/fonts',
     '@nuxthub/core',
     '@nuxt/image',
-    
-  
+    '@nuxt/icon'
   ]
 })
