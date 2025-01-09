@@ -18,7 +18,8 @@ const fetchLastCommit = async () => {
         const commit = await $fetch("/api/getLastCommit", {
             method: "GET",
             headers: useRequestHeaders(['authorization']),
-            "User-Agent": "Portfolio - NUXT"
+            headers: useRequestHeaders(['authorization']),
+            "User-Agent": useRequestHeaders(['User-Agent'])
         });
 
         // Récupérer les informations du dernier commit
