@@ -4,9 +4,7 @@ export default defineNuxtConfig({
   runtimeConfig: {
     // Variables accessibles uniquement côté serveur
     githubToken: process.env.GITHUB_API_TOKEN,
-    public:{
-      
-    }
+
   },
   compatibilityDate: '2024-11-01',
   devtools: { enabled: true },
