@@ -1,6 +1,5 @@
 <template>
     <div class="bg-zinc-900 border-lime-600 font-mono min-w-40 max-w-96 w-full rounded-lg border-4 ease duration-300 p-6">
-        <pre>{{ test }}</pre>
         <pre v-if="lastCommit">{{ lastCommit }}</pre>
         <p v-else>Chargement...</p>
     </div>
@@ -18,8 +17,6 @@ const fetchLastCommit = async () => {
         const commit = await $fetch("/api/getLastCommit", {
             method: "GET",
             headers: useRequestHeaders(['authorization']),
-            headers: useRequestHeaders(['authorization']),
-            "User-Agent": useRequestHeaders(['User-Agent'])
         });
 
         // Récupérer les informations du dernier commit

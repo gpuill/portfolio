@@ -3,7 +3,7 @@ export default defineNuxtConfig({
 
   runtimeConfig: {
     // Variables accessibles uniquement côté serveur
-    githubToken: process.env._API_TOKEN_GITHUB,
+    githubToken: process.env.GITHUB_API_TOKEN,
     public:{
       
     }
