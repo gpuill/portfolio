@@ -3,6 +3,7 @@
         <p>
             C'est moi🚀
         </p>
+        <last-commit-portfolio/>
     </main>
 </template>
 <script setup>

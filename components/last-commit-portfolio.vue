@@ -1,5 +1,5 @@
 <template>
-    <div class="bg-zinc-900 border-lime-600 font-mono min-w-40 max-w-80 w-full rounded-lg border-4 ease duration-300 p-6">
+    <div class="bg-zinc-900 border-lime-600 font-mono min-w-40 max-w-96 w-full rounded-lg border-4 ease duration-300 p-6">
         <pre>{{ test }}</pre>
         <pre v-if="lastCommit">{{ lastCommit }}</pre>
         <p v-else>Chargement...</p>

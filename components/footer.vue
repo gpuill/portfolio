@@ -1,8 +1,11 @@
 <template>
     <footer class="bg-lime-950">
-        <UTooltip text="Accueil" :popper="{ arrow: true }">
-            <NuxtLink to="/"><img src="/static/images/GP_grandformat.png" ></NuxtLink>
-        </UTooltip>
+        <div>
+            <UTooltip text="Accueil" :popper="{ arrow: true }">
+                <NuxtLink to="/"><img src="/static/images/GP_grandformat.png" ></NuxtLink>
+            </UTooltip>
+            <last-commit-portfolio/>
+        </div>
         <div class="menu_wrap">
             <NuxtLink to="/projets">
                 <span>Projets</span>
