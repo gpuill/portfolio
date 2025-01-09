@@ -15,7 +15,8 @@ export default defineEventHandler(async (event) => {
             Accept: "application/vnd.github+json",
             Authorization: `Bearer ${config.githubToken}`,
             "X-GitHub-Api-Version": "2022-11-28",
-
+            'User-Agent': 'gpuill', // Ajout de l'en-tête User-Agent
+            
         },
     });
 
@@ -32,6 +33,7 @@ export default defineEventHandler(async (event) => {
             Accept: "application/vnd.github+json",
             Authorization: `Bearer ${config.githubToken}`,
             "X-GitHub-Api-Version": "2022-11-28",
+            'User-Agent': 'gpuill', // Ajout de l'en-tête User-Agent
 
         },
     });
