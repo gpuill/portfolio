@@ -15,7 +15,7 @@ export default defineEventHandler(async (event) => {
             Accept: "application/vnd.github+json",
             Authorization: `Bearer ${config.githubToken}`,
             "X-GitHub-Api-Version": "2022-11-28",
-            'User-Agent': 'gpuill', // Ajout de l'en-tête User-Agent
+            'User-Agent': 'PostmanRuntime/7.43.0', // Ajout de l'en-tête User-Agent
             
         },
     });
