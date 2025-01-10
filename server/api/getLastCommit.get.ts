@@ -13,8 +13,8 @@ export default defineEventHandler(async (event) => {
             
         },
     } as any
-    console.log(process.env)
-    console.log(process.env.GITHUB_API_TOKEN)
 
-    return config1;
+    const jsonMaster = await $fetch(urlGetMaster, config1) as any;
+
+    return jsonMaster;
 });

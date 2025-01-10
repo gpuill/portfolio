@@ -9,7 +9,6 @@ export default defineEventHandler(async (event) => {
     }
 
 
-    const config = useRuntimeConfig(event);
     const urlGetMaster = "https://api.github.com/repos/gpuill/portfolio/git/refs/heads/master";
 
     const config1 = {
@@ -22,7 +21,6 @@ export default defineEventHandler(async (event) => {
         },
     } as any
 
-    console.log(config1.headers);
 
     const jsonMaster: JsonMaster = await $fetch(urlGetMaster, config1);
 
