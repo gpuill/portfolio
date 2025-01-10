@@ -4,7 +4,7 @@
             <UTooltip text="Accueil" :popper="{ arrow: true }">
                 <NuxtLink to="/"><img src="/static/images/GP_grandformat.png" ></NuxtLink>
             </UTooltip>
-            <last-commit-portfolio/>
+            <last-commit-portfolio-no-API/>
         </div>
         <div class="menu_wrap">
             <NuxtLink to="/projets">
