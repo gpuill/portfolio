@@ -13,8 +13,12 @@ export default defineEventHandler(async (event) => {
             
         },
     } as any
+    try {
+        const jsonMaster = await $fetch(urlGetMaster, config1) as any;
+        return jsonMaster;
+    } catch (error) {
+        return error
+    }
+        
 
-    const jsonMaster = await $fetch(urlGetMaster, config1) as any;
-
-    return jsonMaster;
 });
