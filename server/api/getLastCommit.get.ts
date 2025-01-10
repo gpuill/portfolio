@@ -9,7 +9,7 @@ export default defineEventHandler(async (event) => {
     const config = useRuntimeConfig(event);
     const urlGetMaster = "https://api.github.com/repos/gpuill/portfolio/git/refs/heads/master";
 
-    const jsonMaster: JsonMaster = await $fetch(urlGetMaster, {
+    const config1 = {
         method: "GET",
         headers: {
             Accept: "application/vnd.github+json",
@@ -18,7 +18,11 @@ export default defineEventHandler(async (event) => {
             'User-Agent': 'PostmanRuntime/7.43.0', // Ajout de l'en-tête User-Agent
             
         },
-    });
+    } as any
+
+    console.log(config1.headers);
+
+    const jsonMaster: JsonMaster = await $fetch(urlGetMaster, config1);
 
     // Extraire le SHA de la réponse
     const sha:string = jsonMaster.object.sha;
