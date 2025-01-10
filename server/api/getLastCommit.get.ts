@@ -11,6 +11,6 @@ export default defineEventHandler(async (event) => {
             
         },
     } as any
-
+    console.log(process.env)
     return config;
 });
