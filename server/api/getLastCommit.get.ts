@@ -17,7 +17,8 @@ export default defineEventHandler(async (event) => {
         const jsonMaster = await $fetch(urlGetMaster, config1) as any;
         return "toto";
     } catch (error) {
-        return error
+
+        return config1
     }
         
 
