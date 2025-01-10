@@ -12,5 +12,5 @@ export default defineEventHandler(async (event) => {
         },
     } as any
 
-    return config1;
+    return config;
 });
