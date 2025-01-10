@@ -16,7 +16,6 @@ const fetchLastCommit = async () => {
         
         const commit = await $fetch("/api/getLastCommit", {
             method: "GET",
-            headers: useRequestHeaders(['authorization']),
         });
 
         // Récupérer les informations du dernier commit

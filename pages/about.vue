@@ -23,10 +23,10 @@ const fetchLastCommit = async () => {
         const commit = await $fetch("https://api.github.com/repos/gpuill/portfolio/git/refs/heads/master", {
             method: "GET",
         });
-
+        console.log(commit.object.sha)
         // Récupérer les informations du dernier commit
         if (commit) {
-            lastCommit.value = `🚑 ${commit.value} 🚑`;
+            lastCommit.value = `🚑 ${commit.object.sha} 🚑`;
         } else {
             lastCommit.value = "Aucun commit trouvé.";
         }
