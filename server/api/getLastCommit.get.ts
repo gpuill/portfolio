@@ -14,7 +14,7 @@ export default defineEventHandler(async (event) => {
         method: "GET",
         headers: {
             Accept: "application/vnd.github+json",
-            Authorization: `Bearer ${config.githubToken}`,
+            Authorization: `Bearer ${process.env.GITHUB_API_TOKEN}`,
             "X-GitHub-Api-Version": "2022-11-28",
             
         },
@@ -35,7 +35,7 @@ export default defineEventHandler(async (event) => {
         method: "GET",
         headers: {
             Accept: "application/vnd.github+json",
-            Authorization: `Bearer ${config.githubToken}`,
+            Authorization: `Bearer ${process.env.GITHUB_API_TOKEN}`,
             "X-GitHub-Api-Version": "2022-11-28",
 
         },
