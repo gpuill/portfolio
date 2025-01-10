@@ -26,7 +26,7 @@ const fetchLastCommit = async () => {
 
         // Récupérer les informations du dernier commit
         if (commit) {
-            lastCommit.value = `🚑 ${commit} 🚑`;
+            lastCommit.value = `🚑 ${commit.value} 🚑`;
         } else {
             lastCommit.value = "Aucun commit trouvé.";
         }
