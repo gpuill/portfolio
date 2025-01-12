@@ -18,5 +18,5 @@ export default defineNuxtConfig({
     '@nuxthub/core',
     '@nuxt/image',
     '@nuxt/icon'
-  ]
+  ],
 })

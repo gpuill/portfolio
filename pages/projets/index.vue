@@ -1,7 +1,6 @@
 <template>
     <main>
         <div>
-            <h1>Mes Projets</h1>
             <div class="project-container">
                 <project-card v-for="projet in projets" :key="projet.id" :formation="projet.formation" :annee="projet.annee" :nom="projet.nom"
                     :github="projet.github" :resume="projet.resume" :technologie="projet.technologie"
