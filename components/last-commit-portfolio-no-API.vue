@@ -1,6 +1,20 @@
 <template>
-    <div class="bg-zinc-900 border-lime-600 font-mono min-w-40 max-w-96 w-full rounded-lg border-4 ease duration-300 p-6">
-        <pre v-if="lastCommit">{{ lastCommit }}</pre>
+    <div class="
+    bg-zinc-900 border-lime-600 font-mono 
+    max-w-96 w-[30vw] 
+    p-2
+    sm:p-4
+    md:p-6
+    rounded-lg border-4 ease duration-300 
+    lg:
+
+    ">
+        <pre v-if="lastCommit" 
+        class="text-xs
+        sm:text-sm
+        md:text-lg
+        
+        ">{{ lastCommit }}</pre>
         <p v-else>Chargement...</p>
     </div>
 </template>
@@ -52,7 +66,7 @@ const fetchLastCommit = async () => {
 
         // Récupérer les informations du dernier commit
         if (commit) {
-            lastCommit.value = `Message: ${commit.commit.message}\nAuteur: ${commit.commit.author.name}\nDate: ${commit.commit.author.date}`;
+            lastCommit.value = `Nom: ${commit.commit.message}\nAuteur: ${commit.commit.author.name}\nDate: ${commit.commit.author.date}`;
         } else {
             lastCommit.value = "Aucun commit trouvé.";
         }

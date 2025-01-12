@@ -1,5 +1,5 @@
 <template>
-    <div class="project-card min-w-80 " :style="{ backgroundColor: mainColor, borderColor: secondaryColor }">
+    <div class="project-card min-w-80 max-h-[600px]" :style="{ backgroundColor: mainColor, borderColor: secondaryColor }">
         <div class="project-header">
             <img v-if="logo" :src="logo" :alt="nom" class="project-logo" :style="{ backgroundColor: mainColor, borderColor: secondaryColor }"/>
             <img v-else :src="`/static/images/icons/${topTechnologies[0]}-icon.png`" :alt="nom" class="project-logo" :style="{ backgroundColor: mainColor, borderColor: secondaryColor }"/>

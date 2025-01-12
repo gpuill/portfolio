@@ -1,6 +1,10 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-
+  app: {
+    head: {
+      charset: 'utf-8',
+      viewport: 'width=device-width, initial-scale=1',
+    }
+  },
   runtimeConfig: {
     // Variables accessibles uniquement côté serveur
     githubToken: process.env.GITHUB_API_TOKEN,

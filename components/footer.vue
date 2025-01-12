@@ -1,5 +1,5 @@
 <template>
-    <footer class="bg-lime-950">
+    <footer class="bg-lime-950 flex-col md:flex-row">
         <div>
             <UTooltip text="Accueil" :popper="{ arrow: true }">
                 <NuxtLink to="/"><img src="/static/images/GP_grandformat.png" ></NuxtLink>
