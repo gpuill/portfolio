@@ -1,11 +1,6 @@
 <template>
-    <footer class="bg-lime-950 flex-col md:flex-row">
-        <div>
-            <UTooltip text="Accueil" :popper="{ arrow: true }">
-                <NuxtLink to="/"><img src="/static/images/GP_grandformat.png" ></NuxtLink>
-            </UTooltip>
-            <last-commit-portfolio-no-API/>
-        </div>
+    <footer class="bg-lime-950">
+        <last-commit-portfolio-no-API/>
         <div class="menu_wrap">
             <NuxtLink to="/projets">
                 <span>Projets</span>

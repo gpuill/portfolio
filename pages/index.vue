@@ -6,7 +6,7 @@
         <div class="main-content">
             <div class="grid">
                 <img src="~/assets/images/moi.png" alt="Photo contractuel" name="Photo contractuel">
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa totam, libero, commodi pariatur dolorum amet non, omnis quod sed eos saepe nobis iure? Omnis suscipit asperiores sequi placeat voluptate amet?</p>
+                <p>Ceci n'est pas moi   </p>
             </div>
             <div class="para-presa">
                 <p class="bg-zinc-700 text-2xl font-sans tracking-widest leading-8 max-w-6xl">

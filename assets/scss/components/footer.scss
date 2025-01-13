@@ -5,8 +5,6 @@ footer{
     width: 100%;
     padding: 10vh 10vw;
     display: grid;
-    grid-template-columns: repeat(3,auto);
-    grid-template-rows: 1;
     align-content: center;
     &>div{
         display: block;
@@ -19,15 +17,39 @@ footer{
         gap: 10px;
         font-size: 1rem;
         font-weight: bold;
+        a{
+            width: fit-content;
+            height: fit-content;
+        }
     }
     .media_wrap{
         a{
+            width: fit-content;
+            height: fit-content;
             img{
                 width: auto;
                 height: auto;
                 max-width: 5rem;
                 max-height: 5rem;
             }
+        }
+    }
+}
+
+@media(min-width: 768px){
+    footer{
+        grid-template-columns: repeat(3, auto);
+        grid-template-rows: repeat(1, auto);
+    }
+}
+
+@media(max-width: 768px){
+    footer{
+        grid-template-rows: repeat(3, auto);
+        grid-template-columns: repeat(1, auto);
+        gap: 1rem;
+        .media_wrap{
+            flex-direction: row;
         }
     }
 }

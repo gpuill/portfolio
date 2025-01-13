@@ -1,5 +1,5 @@
 <template>
-    <header>
+    <header class="relative">
         <UHorizontalNavigation :links="links_horizontal" class="hidden horizontalNaviagationes lg:flex hover:text-primary" />
         <UTooltip class="flex lg:hidden p-2 border-4 border-secondary rounded-xl" text="Accueil" :popper="{ arrow: true }">
                 <NuxtLink to="/">
@@ -12,23 +12,50 @@
                     />
                 </NuxtLink>
         </UTooltip>
+        <UButton
+            icon="heroicons:bars-3-bottom-right-20-solid"
+            size="xl"
+            class="flex lg:hidden h-fit w-fit absolute end-10 top-10 z-10"
+            color="primary"
+            square
+            variant="solid"
+            @click="isOpen = true"
+        />
+        <USlideover v-model="isOpen">
+            <div class="py-20 px-4 flex-1">
+                <UButton
+                color="gray"
+                variant="ghost"
+                size="xl"
+                icon="i-heroicons-x-mark-20-solid"
+                class="flex lg:hidden absolute end-5 top-5 z-10"
+                square
+                padded
+                @click="isOpen = false"
+                />
+                <Placeholder class="h-full" />
+                <UVerticalNavigation :links="links_vertical "/>
+
+            </div>
+
+        </USlideover>
 
     </header>
 </template>
 
 <script setup>
+import { ref } from "vue";
 
+const isOpen = ref(false);
 
 const links_horizontal = [{
     label: 'Projets',
-    icon: 'i-heroicons-home',
     to: '/projets',
     labelClass:'text-xl',
     linkClass:'hover:text-primary',
 },
 {
     label: 'Compétences',
-    icon: '',
     to: '/competences',
     labelClass:'text-xl',
     linkClass:'hover:text-primary',
@@ -44,14 +71,12 @@ const links_horizontal = [{
 },
 {
     label: 'Contact',
-    icon: '',
     to: '/contact',
     labelClass:'text-xl',
     linkClass:'hover:text-primary',
 },
 {
     label: 'À propos',
-    icon: '',
     to: '/about',
     labelClass:'text-xl',
     linkClass:'hover:text-primary',
@@ -59,6 +84,41 @@ const links_horizontal = [{
 
 ]
 
+
+const links_vertical = [{
+    label: 'Accueil',
+    to: '/',
+    labelClass:'text-xl',
+    linkClass:'hover:text-primary',
+    icon:'heroicons:home-20-solid',
+    iconClass:'heroicons:home-20-solid',
+},
+{
+    label: 'Projets',
+    to: '/projets',
+    labelClass:'text-xl',
+    linkClass:'hover:text-primary',
+},
+{
+    label: 'Compétences',
+    to: '/competences',
+    labelClass:'text-xl',
+    linkClass:'hover:text-primary',
+},
+{
+    label: 'Contact',
+    to: '/contact',
+    labelClass:'text-xl',
+    linkClass:'hover:text-primary',
+},
+{
+    label: 'À propos',
+    to: '/about',
+    labelClass:'text-xl',
+    linkClass:'hover:text-primary',
+}
+
+]
 
 </script>
 

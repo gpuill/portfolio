@@ -1,9 +1,8 @@
 <template>
     <div class="
     bg-zinc-900 border-lime-600 font-mono 
-    max-w-96 w-[30vw] 
-    p-2
-    sm:p-4
+    p-2 w-fit h-fit
+    sm:p-4 
     md:p-6
     rounded-lg border-4 ease duration-300 
     lg:
@@ -66,7 +65,7 @@ const fetchLastCommit = async () => {
 
         // Récupérer les informations du dernier commit
         if (commit) {
-            lastCommit.value = `Nom: ${commit.commit.message}\nAuteur: ${commit.commit.author.name}\nDate: ${commit.commit.author.date}`;
+            lastCommit.value = `Nom: ${commit.commit.message}\nAuteur: ${commit.commit.author.name}\nDate: ${commit.commit.author.date.substring(0,10)}`;
         } else {
             lastCommit.value = "Aucun commit trouvé.";
         }
