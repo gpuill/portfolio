@@ -1,6 +1,6 @@
 <template>
     <footer class="bg-lime-950">
-        <last-commit-portfolio-no-API/>
+        <last-commit-portfolio-no-API class="last_commit_footer"/>
         <div class="menu_wrap">
             <NuxtLink to="/projets">
                 <span>Projets</span>

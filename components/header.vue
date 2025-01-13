@@ -1,8 +1,7 @@
 <template>
     <header class="relative">
         <UHorizontalNavigation :links="links_horizontal" class="hidden horizontalNaviagationes lg:flex hover:text-primary" />
-        <UTooltip class="flex lg:hidden p-2 border-4 border-secondary rounded-xl" text="Accueil" :popper="{ arrow: true }">
-                <NuxtLink to="/">
+        <NuxtLink class="flex lg:hidden" to="/">
                     <NuxtImg
                     preload 
                     class="min-w-16 max-h-24 w-full p-2"
@@ -11,7 +10,6 @@
                     loading="lazy"
                     />
                 </NuxtLink>
-        </UTooltip>
         <UButton
             icon="heroicons:bars-3-bottom-right-20-solid"
             size="xl"
@@ -34,10 +32,8 @@
                 @click="isOpen = false"
                 />
                 <Placeholder class="h-full" />
-                <UVerticalNavigation :links="links_vertical "/>
-
+                <UVerticalNavigation :links="links_vertical" @click="isOpen = false"/>
             </div>
-
         </USlideover>
 
     </header>
@@ -48,76 +44,75 @@ import { ref } from "vue";
 
 const isOpen = ref(false);
 
-const links_horizontal = [{
-    label: 'Projets',
-    to: '/projets',
-    labelClass:'text-xl',
-    linkClass:'hover:text-primary',
-},
-{
-    label: 'Compétences',
-    to: '/competences',
-    labelClass:'text-xl',
-    linkClass:'hover:text-primary',
-},
-{
-    avatar: {
-        src:'/static/images/logo_guillaume.svg',
-        as:'img',
-        imgClass:'rounded-md min-w-16 max-h-20 w-full p-2',
-        size:'3xl'
+const links_horizontal = [
+    {
+        label: 'Projets',
+        to: '/projets',
+        labelClass:'text-xl',
+        linkClass:'hover:text-primary',
     },
-    to: '/',
-},
-{
-    label: 'Contact',
-    to: '/contact',
-    labelClass:'text-xl',
-    linkClass:'hover:text-primary',
-},
-{
-    label: 'À propos',
-    to: '/about',
-    labelClass:'text-xl',
-    linkClass:'hover:text-primary',
-}
-
+    {
+        label: 'Compétences',
+        to: '/competences',
+        labelClass:'text-xl',
+        linkClass:'hover:text-primary',
+    },
+    {
+        avatar: {
+            src:'/static/images/logo_guillaume.svg',
+            as:'img',
+            imgClass:'rounded-md min-w-16 max-h-20 w-full p-2',
+            size:'3xl'
+        },
+        to: '/',
+    },
+    {
+        label: 'Contact',
+        to: '/contact',
+        labelClass:'text-xl',
+        linkClass:'hover:text-primary',
+    },
+    {
+        label: 'À propos',
+        to: '/about',
+        labelClass:'text-xl',
+        linkClass:'hover:text-primary',
+    }
 ]
 
-
-const links_vertical = [{
-    label: 'Accueil',
-    to: '/',
-    labelClass:'text-xl',
-    linkClass:'hover:text-primary',
-    icon:'heroicons:home-20-solid',
-    iconClass:'heroicons:home-20-solid',
-},
-{
-    label: 'Projets',
-    to: '/projets',
-    labelClass:'text-xl',
-    linkClass:'hover:text-primary',
-},
-{
-    label: 'Compétences',
-    to: '/competences',
-    labelClass:'text-xl',
-    linkClass:'hover:text-primary',
-},
-{
-    label: 'Contact',
-    to: '/contact',
-    labelClass:'text-xl',
-    linkClass:'hover:text-primary',
-},
-{
-    label: 'À propos',
-    to: '/about',
-    labelClass:'text-xl',
-    linkClass:'hover:text-primary',
-}
-
+const links_vertical = [
+    {
+        label: 'Accueil',
+        to: '/',
+        labelClass:'text-xl',
+        linkClass:'hover:text-primary',
+        icon:'heroicons:home-20-solid',
+        iconClass:'heroicons:home-20-solid',
+    },
+    {
+        label: 'Projets',
+        to: '/projets',
+        labelClass:'text-xl',
+        linkClass:'hover:text-primary',
+    },
+    {
+        label: 'Compétences',
+        to: '/competences',
+        labelClass:'text-xl',
+        linkClass:'hover:text-primary',
+    },
+    {
+        label: 'Contact',
+        to: '/contact',
+        labelClass:'text-xl',
+        linkClass:'hover:text-primary',
+    },
+    {
+        label: 'À propos',
+        to: '/about',
+        labelClass:'text-xl',
+        linkClass:'hover:text-primary',
+    }
 ]
 
 </script>

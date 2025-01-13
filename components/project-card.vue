@@ -12,7 +12,7 @@
                     <path d="M0 0 L180 0 L200 20 L180 40 L0 40 L20 20 Z" fill="currentColor" stroke="white" stroke-width="3" />
                     <circle cx="90%" cy="20" r="5" fill="white" />
                 </svg>
-                <span>{{ comp }}</span>
+                <NuxtLink to="">{{ comp }}</NuxtLink>
             </div>  
 
 
@@ -22,6 +22,7 @@
         <div class="project-technologies" :style="{ filter: `drop-shadow(0px 0px 2rem ${mainColor})` }">
             <div class="all-technos">
                 <div v-for="(tech, index) in topTechnologies" :key="index" class="technology-icon" :style="{ borderColor: secondaryColor }">
+                        <!-- Venir ajouter ici l'icon si jamais l'image n'est pas présente dans en local -->
                     <img :src="`/static/images/icons/${tech}-icon.png`" :alt="tech" />
                 </div>  
             </div>

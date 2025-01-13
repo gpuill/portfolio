@@ -58,7 +58,7 @@ $layout-breakpoint-medium: 1440px;
           max-width: 200px; // Limite la taille maximale
         }
 
-        span {
+        a {
             position: absolute;
             font-size: 1em; // Taille de base du texte
             font-weight: bold;
@@ -118,7 +118,7 @@ $layout-breakpoint-medium: 1440px;
 
 
 
-            span {
+            a {
                 position: absolute;
                 color: white;
                 font-size: 0.9rem;
