@@ -92,24 +92,28 @@ const links_vertical = [
     {
         label: 'Projets',
         to: '/projets',
+        icon:'heroicons:cpu-chip-20-solid',
         labelClass:'text-xl',
         linkClass:'hover:text-primary',
     },
     {
         label: 'Compétences',
         to: '/competences',
+        icon:'heroicons:academic-cap-solid',
         labelClass:'text-xl',
         linkClass:'hover:text-primary',
     },
     {
         label: 'Contact',
         to: '/contact',
+        icon:'heroicons:envelope-20-solid',
         labelClass:'text-xl',
         linkClass:'hover:text-primary',
     },
     {
         label: 'À propos',
         to: '/about',
+        icon:'heroicons:identification-20-solid',
         labelClass:'text-xl',
         linkClass:'hover:text-primary',
     }
