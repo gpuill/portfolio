@@ -1,5 +1,5 @@
 <template>
-    <header class="relative">
+    <header class="">
         <UHorizontalNavigation :links="links_horizontal" class="hidden horizontalNaviagationes lg:flex hover:text-primary" />
         <NuxtLink class="flex lg:hidden" to="/">
                     <NuxtImg
@@ -13,7 +13,7 @@
         <UButton
             icon="heroicons:bars-3-bottom-right-20-solid"
             size="xl"
-            class="flex lg:hidden h-fit w-fit absolute end-10 top-10 z-10"
+            class="flex lg:hidden h-fit w-fit absolute end-10 top-8 z-10"
             color="primary"
             square
             variant="solid"

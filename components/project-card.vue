@@ -6,7 +6,6 @@
             <h2 class="">{{ nom }}</h2>
         </div>
         <div class="tags-container" :style="{ backgroundColor: mainColor, borderColor: secondaryColor }">
-
             <div v-for="(comp, index) in competences" :key="index" class="tag-wrapper" :data-skill="comp">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 40" class="tag" preserveAspectRatio="xMinYMin meet">
                     <path d="M0 0 L180 0 L200 20 L180 40 L0 40 L20 20 Z" fill="currentColor" stroke="white" stroke-width="3" />
@@ -14,9 +13,6 @@
                 </svg>
                 <NuxtLink to="">{{ comp }}</NuxtLink>
             </div>  
-
-
-
         </div>
         <p class="project-resume">{{ resume }}</p>
         <div class="project-technologies" :style="{ filter: `drop-shadow(0px 0px 2rem ${mainColor})` }">
@@ -27,13 +23,7 @@
                 </div>  
             </div>
             <a v-if="github" :href="github" class="github-link">
-                <NuxtImg
-                    src="/static/images/icons/github-icon.png"
-                    height="50"
-                    densities="x1"
-                    />
-
-
+                <UIcon name="logos:github-icon" class="w-12 h-12" />  
             </a>
             <img v-else class="no-github-image" src="/static/images/icons/no-github-icon.png" alt="">
         </div>

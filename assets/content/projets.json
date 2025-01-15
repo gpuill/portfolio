@@ -5,8 +5,8 @@
         "annee": 1,
         "nom": "Puissance 4",
         "github": "https://github.com/gpuill/Puissance_4/tree/main/SAE_1.01-Puissance_4",
-        "resume": "Réalisation d'un 'Puissance 4' en language C au cours de la première année de BUT. L'idée était de réalisé un puissance 4 qui se joue dans le terminal, chaque jouer jouait l'un après l'autre. Une partie se terminait lorsqu'un des deux joueurs allignait 4 pions ou que la grille était remplie.",
-        "description": "  ",
+        "resume": "Réalisation d'un 'Puissance 4' en langage C au cours de la première année de BUT. L'idée était de réaliser un Puissance 4 qui se joue dans le terminal, chaque joueur jouant à tour de rôle. Une partie se terminait lorsqu'un des deux joueurs alignait 4 pions ou que la grille était remplie.",
+        "description": "Au cours de ma première année de BUT, j'ai réalisé un projet consistant à développer un jeu 'Puissance 4' en langage C. Ce projet s'inscrivait dans le cadre de l'apprentissage de l'algorithmique et visait à mettre en pratique les fondamentaux de la programmation structurée. L'intégralité du développement a été réalisée exclusivement en C, sans recours à des bibliothèques externes, afin de bien maîtriser les concepts de base tels que les boucles, les conditions, la gestion des tableaux et les fonctions.\n\nLe jeu fonctionnait directement dans le terminal et permettait à deux joueurs de s'affronter en tour par tour. Chaque joueur pouvait sélectionner une colonne pour y insérer son pion, et le programme gérait automatiquement la mise à jour de la grille, en vérifiant la validité des coups. Une partie se terminait lorsqu'un des joueurs parvenait à aligner quatre pions horizontalement, verticalement ou en diagonale, ou lorsque la grille était entièrement remplie, entraînant une égalité.\n\nCe projet m'a permis de développer des compétences en algorithmique, comme la vérification des conditions de victoire, l'implémentation de boucles pour gérer les tours de jeu, et l'optimisation du code pour s'assurer que le programme reste lisible et efficace. Il m'a également appris à déboguer mon code, à anticiper les cas d'erreurs utilisateurs, et à structurer mon programme de manière modulaire.\n\nCe premier projet fut une excellente introduction à la programmation et m'a donné le goût des défis informatiques, tout en renforçant ma compréhension des bases essentielles pour tout développeur.",
         "technologie": [
             "C"
         ],
@@ -15,7 +15,7 @@
         "logo": "",
         "competences": [
             "Réaliser",
-            "Conduire"
+            "Optimiser"
         ]
     },
     {

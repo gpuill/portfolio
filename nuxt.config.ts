@@ -1,3 +1,5 @@
+import colors from 'tailwindcss/colors'
+
 export default defineNuxtConfig({
   app: {
     head: {
@@ -5,12 +7,8 @@ export default defineNuxtConfig({
       viewport: 'width=device-width, initial-scale=1',
     }
   },
-  runtimeConfig: {
-    // Variables accessibles uniquement côté serveur
-    githubToken: process.env.GITHUB_API_TOKEN,
-    public:{
-      
-    }
+  colorMode:{
+    preference:'dark',
   },
   compatibilityDate: '2024-11-01',
   devtools: { enabled: true },
@@ -23,4 +21,25 @@ export default defineNuxtConfig({
     '@nuxt/image',
     '@nuxt/icon'
   ],
+  runtimeConfig: {
+    // Variables accessibles uniquement côté serveur
+    githubToken: process.env.GITHUB_API_TOKEN,
+    public:{
+      
+    }
+  },
+  tailwindcss:{
+    config:{
+      theme: {
+        extend: {
+          colors: {
+              primary: colors.blue,
+              secondary: colors.orange,
+              neutral: colors.gray
+          }
+        }
+      }
+    }
+  },
+
 })

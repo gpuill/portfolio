@@ -1,5 +1,5 @@
 <template>
-    <footer class="bg-lime-950">
+    <footer class="bg-primary-900">
         <last-commit-portfolio-no-API class="last_commit_footer"/>
         <div class="menu_wrap">
             <NuxtLink to="/projets">
