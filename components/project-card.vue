@@ -1,9 +1,9 @@
 <template>
-    <div class="project-card min-w-80 max-h-[600px]" :style="{ backgroundColor: mainColor, borderColor: secondaryColor }">
+    <div class="project-card min-w-64 h-fit sm:max-h-[700px]  md:max-h-[600px] md:h-[600px]" :style="{ backgroundColor: mainColor, borderColor: secondaryColor }">
         <div class="project-header">
             <img v-if="logo" :src="logo" :alt="nom" class="project-logo" :style="{ backgroundColor: mainColor, borderColor: secondaryColor }"/>
             <img v-else :src="`/static/images/icons/${topTechnologies[0]}-icon.png`" :alt="nom" class="project-logo" :style="{ backgroundColor: mainColor, borderColor: secondaryColor }"/>
-            <h2 class="">{{ nom }}</h2>
+            <h2 class="md:text-xl">{{ nom }}</h2>
         </div>
         <div class="tags-container" :style="{ backgroundColor: mainColor, borderColor: secondaryColor }">
             <div v-for="(comp, index) in competences" :key="index" class="tag-wrapper" :data-skill="comp">
@@ -18,14 +18,16 @@
         <div class="project-technologies" :style="{ filter: `drop-shadow(0px 0px 2rem ${mainColor})` }">
             <div class="all-technos">
                 <div v-for="(tech, index) in topTechnologies" :key="index" class="technology-icon" :style="{ borderColor: secondaryColor }">
-                        <!-- Venir ajouter ici l'icon si jamais l'image n'est pas présente dans en local -->
+                    <!-- Venir ajouter ici l'icon si jamais l'image n'est pas présente dans en local -->
                     <img :src="`/static/images/icons/${tech}-icon.png`" :alt="tech" />
                 </div>  
             </div>
-            <a v-if="github" :href="github" class="github-link">
-                <UIcon name="logos:github-icon" class="w-12 h-12" />  
-            </a>
-            <img v-else class="no-github-image" src="/static/images/icons/no-github-icon.png" alt="">
+            <div class="git">
+                <a v-if="github" :href="github" class="github-link">
+                    <UIcon name="logos:github-icon" class="w-12 h-12" />  
+                </a>
+                <UIcon v-else name="logos:github-icon" class="no-github-image w-12 h-12" /> 
+            </div>
         </div>
         
     </div>

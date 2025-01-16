@@ -1,13 +1,23 @@
 <template>
-    <main class="bg-zinc-900">
+    <main class="">
         <div class="main-hello">
             <h1 class="sm:bg-black xl:bg-red-300">Bonjour</h1>
         </div>
         <div class="main-content">
             <div class="grid">
+                <NuxtImg src="/logos/nuxt.png" sizes="100vw sm:50vw md:400px" densities="x1 x2"/>
+
                 <img src="~/assets/images/moi.png" alt="Photo contractuel" name="Photo contractuel">
                 <p>Ceci n'est pas moi   </p>
             </div>
+            <UContainer>
+                <div class="">
+                    <h3>Études</h3>
+                    <ul>
+                        <li>Baccalauréat géneral 2019 - 2022</li>
+                    </ul>
+                </div>
+            </UContainer>
             <div class="para-presa">
                 <p class="bg-zinc-700 text-2xl font-sans tracking-widest leading-8 max-w-6xl">
                     Bonjour et bienvenue sur mon portfolio, vous pourrez y retrouvés mes projets, une explication des compétences que j'ai pus acquérir au cours de mon BUT et quelque pages que j'ai réaliser pour passer le temps.

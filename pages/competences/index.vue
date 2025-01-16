@@ -1,22 +1,39 @@
 <template>
-    <h1>Competences</h1>
-    <li v-for="post in posts" :key="post.id">
-        <pre>{{ post }}</pre>
-        <NuxtLink :to="`/competences/${post.id}`">lien</NuxtLink>
+    <div class="flex flex-row flex-wrap justify-around p-8 items-center">
+        <competence-card v-for="comp in competences" :key="comp.nom" :nom="comp.nom" 
+                                                        :résumé="comp.résumé" :logo="comp.logo"
+                                                        :description="comp.description" 
+                                                        :mainColor="comp.couleur"/>
 
-    </li>
+    </div>   
 </template>
 
 <script setup>
 import { useHead } from '@vueuse/head';
 
+
 useHead({
-    title: 'Titre personnalisé de la page',
+    title: 'Les compétences du BUT',
     meta: [
         { name: 'description', content: 'Description de la page' }
     ]
 });
 
+</script>
 
-const { data: posts, pending, error, refresh } = await useFetch('https://jsonplaceholder.typicode.com/posts')
+<script >
+import competences from '@/assets/content/competence.json'
+import competenceCard from '~/components/competence-card.vue';
+
+export default {
+    components: {
+        competenceCard
+    },
+    data() {
+        return {
+            competences
+        }
+    }
+}
+
 </script>

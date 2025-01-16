@@ -17,10 +17,9 @@ $layout-breakpoint-medium: 1440px;
     border: 4px solid #ccc;
     border-radius: 8px;
     background-color: #fff;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     position: relative;
     transition: all 0.3s;
-
+    filter: drop-shadow(0px 0px 2px white);
 
     .project-header {
         display: flex;
@@ -154,7 +153,7 @@ $layout-breakpoint-medium: 1440px;
             }
 
             &[data-skill="Collaborer"] {
-                color: #0F0F0F; // Couleur personnalisée
+                color: #2a1c13; // Couleur personnalisée
             }
 
         }     
@@ -180,11 +179,12 @@ $layout-breakpoint-medium: 1440px;
         display: flex;
         flex-direction: row;
         align-items: center;
-        justify-content: space-between;
-        gap: 1rem;
+        justify-content: space-around;
         margin-top: 1rem;
+        padding: auto;
         width: 100%;
-
+        background-color: #ffffff2d;
+        border-radius: 1rem;
         .all-technos{
             display: flex;
             flex-direction: row;
@@ -193,7 +193,7 @@ $layout-breakpoint-medium: 1440px;
             max-width: 100%;
             width: auto;
             padding: 1vh 2vw;
-            border-radius: 4px;
+            border-radius: 0.25rem;
             
             .technology-icon {
                 display: flex;
@@ -203,35 +203,38 @@ $layout-breakpoint-medium: 1440px;
                 width: 50px;
                 height: 50px;
                 padding: 3px;
-                border: 2px solid;
+                border: 3px solid;
                 border-radius: 0.25rem;
             }
         }
 
-        .all-technos .technology-icon img,
-        .github-link img,
-        .no-github-image{
+        .all-technos .technology-icon img{
             width: 43px;
             height: 43px;
             padding: 3px;
         }
+        .git{
+            margin: auto 1rem;
+            .github-link {
+                width: fit-content;
 
-        .github-link {
-            width: 30%;
-            span{
-                transition: all 0.3s;
+                span{
+                    transition: all 0.3s;
+                    &:hover{
+                        filter: drop-shadow(0 0 0.5rem);
+                    }
+                }
+            }
+            
+            .no-github-image{
                 &:hover{
-                    filter: drop-shadow(0 0 0.5rem);
+                    cursor: not-allowed;
+                    filter: drop-shadow(0 0 0.5rem red);
                 }
             }
         }
 
-        .no-github-image{
-            background-color: #ff000050;
-            &:hover{
-                cursor: not-allowed;
-            }
-        }
+
     }
     &:hover{
         transform: scale(1.05);

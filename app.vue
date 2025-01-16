@@ -1,11 +1,9 @@
 <template>
-  <div>
     <NuxtRouteAnnouncer />
     <NuxtLoadingIndicator />
     <Header />
-    <NuxtPage />
+    <NuxtPage class="bg-zinc-900"/>
     <Footer />
-  </div>
 </template>
 
 <style lang="scss">
