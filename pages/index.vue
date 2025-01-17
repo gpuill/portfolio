@@ -1,5 +1,5 @@
 <template>
-    <main class="flex flex-col">
+    <main class="flex flex-col justify-center">
         <section class="flex flex-row justify-end items-center w-full p-8 gap-8">
             <NuxtImg class=" rounded-full" src="/static/images/moi.png" densities="x1 x2"/>
             <div class="flex flex-row gap-2 not-italic text-4xl">
@@ -9,14 +9,26 @@
         </section>
         <section class="w-full p-16">
             <h3 class="flex flex-row gap-2 not-italic text-4xl text-amber-600">
-                Bonjour et bienvenue sur mon site ! 
+                Bonjour et bienvenue sur mon site 🌱 ! 
             </h3>
             <p class="text-2xl px-32 py-16">
-                Vous y retrouverez mes projets et les compétences sur lesquelles je suis évalué en BUT informatique. Si jamais vous souhaitez me contacter ou bien regarder mes projets n'hésitez pas à faire nu tour sur mon GITHUB 
+                Je m'appelle Guillaume Puill, j'ai 21 ans , je suis alternant à l'IUT de Lannion en BUT informatique en 3eme année et je travaille sur Brest. Vous y retrouverez mes projets et les compétences sur lesquelles je suis évalué en BUT informatique. Si jamais vous souhaitez me contacter mes réseaux et contact sont juste en dessous ⬇️ .
+            </p>
+            <p class="text-2xl px-32 py-16">
+                Je souhaiterai poursuivre mes études en école d'ingénieur en alternance !
             </p>
         </section>
-        <section>
+        <section class="none w-full flex flex-col items-center bg-zinc-700">
+            <h2 class="text-black text-4xl ">Mes réseaux</h2>
+            <div class="flex flex-row justify-center">
+                <NuxtLink class="w-40 h-40 flex items-center justify-center rounded-full border-4 border-amber-400 " to="https://github.com/gpuill">
+                    <UIcon class="w-32 h-32" name="logos:github-icon" alt="Github" />
+                </NuxtLink> 
+                <NuxtLink class="w-40 h-40 flex items-center justify-center rounded-full border-4 border-amber-400 " to="https://github.com/gpuill">
+                    <img class="w-28 h-28" src="/static/images/icons/linkedin-icon.svg" alt="Linkedin">
 
+                </NuxtLink> 
+            </div>
         </section>
     </main>
 </template>

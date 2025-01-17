@@ -68,7 +68,8 @@ const links_horizontal = [
     }
     
 ]
-/*,
+/*
+,
     {
         label: 'Contact',
         to: '/contact',
@@ -81,7 +82,8 @@ const links_horizontal = [
         to: '/about',
         labelClass:'text-xl',
         linkClass:'hover:text-primary',
-    }*/
+    }
+        */
 const links_vertical = [
     {
         label: 'Accueil',
