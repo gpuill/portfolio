@@ -8,41 +8,19 @@ body{
     main{
         min-height: 90vh;
         padding: 1rem;
-        div.main-hello{
-            padding: 10rem 1rem;
-            display: flex;
-            text-align: end;
-            justify-content: flex-end;
-            h1{
-                text-decoration: overline solid $base-ecriture-fond-noir;
-                font-size: 4rem;
-                width: fit-content;
-            }
-        }
-        div.main-content{
-            width: 100%;
-            div.grid{
-            display: grid;
-                img{
-                    grid-column: 1/2;
-                    height: 100px;
-                    width: 100%;
-                }
-                p{
-                    grid-column: 2/2;
-                }
-            }
+    }
 
-            div.para-presa{
-                display: flex;
-                margin: 0;
-                padding: 10vh 10vw;
-                justify-content: center;
-                p{
-                    padding: 2vh 5vw;
-                    border-radius: 1rem;
-                }
-            }
+    h1{
+        font-family: "Playfair Display", serif;
+        margin: 0;
+        h2{
+            font-family: "Playfair Display", serif;
+            margin: 0;
         }
     }
+    h2, h3, h4, h5{
+        font-family: "Space Grotesk", serif;
+        margin: 0;
+    }
+
 }

@@ -1,32 +1,31 @@
 <template>
     <div class="project-card min-w-64 h-fit sm:max-h-[700px]  md:max-h-[600px] md:h-[600px]" :style="{ backgroundColor: mainColor, borderColor: secondaryColor }">
         <div class="project-header">
-            <img v-if="logo" :src="logo" :alt="nom" class="project-logo" :style="{ backgroundColor: mainColor, borderColor: secondaryColor }"/>
-            <img v-else :src="`/static/images/icons/${topTechnologies[0]}-icon.png`" :alt="nom" class="project-logo" :style="{ backgroundColor: mainColor, borderColor: secondaryColor }"/>
-            <h2 class="md:text-xl">{{ nom }}</h2>
+            <img v-if="logo.startsWith('/')" :src="logo" alt="Logo Projet" class="project-logo" :style="{ backgroundColor: mainColor, borderColor: secondaryColor }"/>
+            <UIcon v-else :name="logo" alt="Logo Projet" class="project-logo" :style="{ backgroundColor: mainColor, borderColor: secondaryColor }"/>
+            <h2 class="text-lg md:text-xl">{{ nom }}</h2>
         </div>
         <div class="tags-container" :style="{ backgroundColor: mainColor, borderColor: secondaryColor }">
-            <div v-for="(comp, index) in competences" :key="index" class="tag-wrapper" :data-skill="comp">
+            <div v-for="(comp, index) in competences" :key="index" class="tag-wrapper w-3/5" :data-skill="comp">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 40" class="tag" preserveAspectRatio="xMinYMin meet">
                     <path d="M0 0 L180 0 L200 20 L180 40 L0 40 L20 20 Z" fill="currentColor" stroke="white" stroke-width="3" />
                     <circle cx="90%" cy="20" r="5" fill="white" />
                 </svg>
-                <NuxtLink to="">{{ comp }}</NuxtLink>
+                <NuxtLink :to="`/competences#${comp}`">{{ comp }}</NuxtLink>
             </div>  
         </div>
-        <p class="project-resume">{{ resume }}</p>
+        <p class="project-resume text-xs md:text-base">{{ resume }}</p>
         <div class="project-technologies" :style="{ filter: `drop-shadow(0px 0px 2rem ${mainColor})` }">
             <div class="all-technos">
-                <div v-for="(tech, index) in topTechnologies" :key="index" class="technology-icon" :style="{ borderColor: secondaryColor }">
-                    <!-- Venir ajouter ici l'icon si jamais l'image n'est pas présente dans en local -->
-                    <img :src="`/static/images/icons/${tech}-icon.png`" :alt="tech" />
-                </div>  
+                <template v-for="(icon, tech) in technologie" :key="tech">
+                    <img v-if="icon.startsWith('/')" :src="icon" :alt="tech" class="technology-icon" />
+                    <UIcon v-else :name="icon" :alt="tech" class="technology-icon" />
+                </template>
             </div>
             <div class="git">
                 <a v-if="github" :href="github" class="github-link">
                     <UIcon name="logos:github-icon" class="w-12 h-12" />  
                 </a>
-                <UIcon v-else name="logos:github-icon" class="no-github-image w-12 h-12" /> 
             </div>
         </div>
         
@@ -42,30 +41,15 @@ export default {
         nom: String,
         github: String,
         resume: String,
-        technologie: Array,
+        technologie: {
+            type: Object,
+            default: () => ({})
+        },
         mainColor: String,
         secondaryColor: String,
         logo: String,
         competences: Array
-    },
-    computed: {
-        topTechnologies() {
-            // Retourne les trois premières technologies
-            return this.technologie.slice(0, 3);
-        }
-
-    },
-    methods: {
-        getTechIcon(tech) {
-            try {
-                // Import dynamique des icônes
-                return new URL(`@/assets/images/icons/${tech}-icon.png`, import.meta.url).href;
-            } catch (e) {
-                // Icône par défaut en cas d'erreur
-                return new URL('/assets/images/icons/default-icon.png', import.meta.url).href;
-            }
-        }
-    }
+    }   
 
 
 };

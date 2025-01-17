@@ -1,33 +1,20 @@
 <template>
-    <main class="">
-        <div class="main-hello">
-            <h1 class="sm:bg-black xl:bg-red-300">Bonjour</h1>
-        </div>
-        <div class="main-content">
-            <div class="grid">
-                <NuxtImg src="/logos/nuxt.png" sizes="100vw sm:50vw md:400px" densities="x1 x2"/>
-
-                <img src="~/assets/images/moi.png" alt="Photo contractuel" name="Photo contractuel">
-                <p>Ceci n'est pas moi   </p>
-            </div>
-            <UContainer>
-                <div class="">
-                    <h3>Études</h3>
-                    <ul>
-                        <li>Baccalauréat géneral 2019 - 2022</li>
-                    </ul>
-                </div>
-            </UContainer>
-            <div class="para-presa">
-                <p class="bg-zinc-700 text-2xl font-sans tracking-widest leading-8 max-w-6xl">
-                    Bonjour et bienvenue sur mon portfolio, vous pourrez y retrouvés mes projets, une explication des compétences que j'ai pus acquérir au cours de mon BUT et quelque pages que j'ai réaliser pour passer le temps.
-                </p>
-            </div>
-        </div>
-        
-
+    <main class="flex flex-col">
+        <section class="flex flex-row justify-center items-center w-full p-8 gap-8">
+            <NuxtImg class=" rounded-full" src="/static/images/moi.png" densities="x1 x2"/>
+            <h1 class="flex flex-row gap-2 not-italic text-4xl">Guillaume Puill 
+                <h2 class=" text-4xl text-primary font-bold not-italic">ÉTUDIANT ALTERNANT</h2>
+            </h1>
+        </section>
+        <section class="w-full p-16">
+            <h3 class="flex flex-row gap-2 not-italic text-4xl underline text-amber-600">
+                Bonjour et bienvenue sur mon site ! 
+            </h3>
+            <p class="text-2xl px-32 py-16">
+                Vous y retrouverez mes projets et les compétences sur lesquelles je suis évalué en BUT informatique. Si jamais vous souhaitez me contacter ou bien regarder mes projets n'hésitez pas à faire nu tour sur mon GITHUB 
+            </p>
+        </section>
     </main>
-
 </template>
 
 

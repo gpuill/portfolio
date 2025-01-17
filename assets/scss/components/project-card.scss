@@ -30,7 +30,6 @@ $layout-breakpoint-medium: 1440px;
         border-radius: 1rem;
         padding: 0.5rem;
         h2{
-            font-size: 1.4rem;
             font-weight: bold;
             transform: translateY(-1rem);
             text-align: center;
@@ -72,21 +71,13 @@ $layout-breakpoint-medium: 1440px;
                 max-width: 150px; // Réduit la taille maximale du SVG pour les tablettes
             }
         
-            span {
-                font-size: 0.85em; // Réduit légèrement la taille du texte
-            }
         }
     }
-      
     @media screen and (max-width: 480px) {
         .tag-wrapper {
-        svg {
-            max-width: 100px; // Réduction supplémentaire pour les petits écrans
-        }
-    
-        span {
-            font-size: 0.7em; // Réduction de la taille du texte
-        }
+            svg {
+                max-width: 100px; // Réduction supplémentaire pour les petits écrans
+            }
         }
     }
     
@@ -157,21 +148,10 @@ $layout-breakpoint-medium: 1440px;
             }
 
         }     
-        @media (max-width: $layout-breakpoint-medium) {
-            .tag-wrapper{
-                svg{
-                    width: 85px;
-                }
-                span{
-                    font-size: 0.7rem;
-                }
-            }
-        }     
     }
 
     .project-resume{
         margin: 0.5rem;
-        font-size: 1rem;
         align-items: center;
     }
 

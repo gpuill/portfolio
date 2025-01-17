@@ -5,6 +5,10 @@ export default defineNuxtConfig({
     head: {
       charset: 'utf-8',
       viewport: 'width=device-width, initial-scale=1',
+      link:[
+        { rel: 'preconnect', href: 'https://fonts.googleapis.com/' },
+        { href:"https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Space+Grotesk:wght@300..700&display=swap"}
+      ]
     }
   },
   colorMode:{
@@ -34,7 +38,7 @@ export default defineNuxtConfig({
         extend: {
           colors: {
               primary: colors.blue,
-              secondary: colors.orange,
+              secondary: colors.amber,
               neutral: colors.gray
           }
         }
