@@ -71,15 +71,15 @@ const links_horizontal = [
         to: '/contact',
         labelClass:'text-xl',
         linkClass:'hover:text-primary',
-    },
+    }
+]
+/*,
     {
         label: 'À propos',
         to: '/about',
         labelClass:'text-xl',
         linkClass:'hover:text-primary',
-    }
-]
-
+    }*/
 const links_vertical = [
     {
         label: 'Accueil',

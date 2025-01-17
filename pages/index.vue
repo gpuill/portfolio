@@ -1,10 +1,11 @@
 <template>
     <main class="flex flex-col">
-        <section class="flex flex-row justify-center items-center w-full p-8 gap-8">
+        <section class="flex flex-row justify-end items-center w-full p-8 gap-8">
             <NuxtImg class=" rounded-full" src="/static/images/moi.png" densities="x1 x2"/>
-            <h1 class="flex flex-row gap-2 not-italic text-4xl">Guillaume Puill 
-                <h2 class=" text-4xl text-primary font-bold not-italic">ÉTUDIANT ALTERNANT</h2>
-            </h1>
+            <div class="flex flex-row gap-2 not-italic text-4xl">
+                <h1 class="not-italic text-4xl">Guillaume Puill </h1>
+                <h1 class=" text-4xl text-primary font-bold not-italic">ÉTUDIANT ALTERNANT</h1>
+            </div>
         </section>
         <section class="w-full p-16">
             <h3 class="flex flex-row gap-2 not-italic text-4xl underline text-amber-600">
@@ -13,6 +14,9 @@
             <p class="text-2xl px-32 py-16">
                 Vous y retrouverez mes projets et les compétences sur lesquelles je suis évalué en BUT informatique. Si jamais vous souhaitez me contacter ou bien regarder mes projets n'hésitez pas à faire nu tour sur mon GITHUB 
             </p>
+        </section>
+        <section>
+
         </section>
     </main>
 </template>
