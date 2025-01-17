@@ -12,8 +12,7 @@
                 Bonjour et bienvenue sur mon site 🌱 ! 
             </h3>
             <p class="text-2xl px-32 py-16">
-                Je m'appelle Guillaume Puill, j'ai 21 ans , je suis alternant à l'IUT de Lannion en BUT informatique en 3eme année et je travaille sur Brest. Vous y retrouverez mes projets et les compétences sur lesquelles je suis évalué en BUT informatique. Si jamais vous souhaitez me contacter mes réseaux et contact sont juste en dessous ⬇️ .
-            </p>
+                Je m'appelle Guillaume Puill, j'ai 21 ans, je suis alternant à l'IUT de Lannion en BUT Informatique, en 3ᵉ année, et je travaille à Brest. Vous y retrouverez mes projets ainsi que les compétences sur lesquelles je suis évalué en BUT Informatique. Si jamais vous souhaitez me contacter, mes réseaux sociaux et mes coordonnées sont juste en dessous ⬇️.            </p>
             <p class="text-4xl px-32 py-16 text-amber-400">
                 Je souhaiterai poursuivre mes études en école d'ingénieur en alternance !
             </p>
