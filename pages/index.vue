@@ -1,6 +1,6 @@
 <template>
     <main class="flex flex-col justify-center">
-        <section class="flex flex-row justify-end items-center w-full h-[40vh] p-8 gap-8">
+        <section class="flex flex-row justify-end items-center w-full h-fit p-8 gap-8">
             <NuxtImg class=" rounded-full" src="/static/images/moi.png" densities="x1 x2"/>
             <div class="flex flex-row gap-2 not-italic text-4xl">
                 <h2 class="not-italic text-4xl">Je suis Guillaume Puill, </h2>

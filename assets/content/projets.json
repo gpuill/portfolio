@@ -86,7 +86,7 @@
     {
         "id": 4,
         "formation": "Alternance",
-        "annee": 1,
+        "annee": 2,
         "nom": "Supervision Grafana",
         "github": "",
         "resume": "Au cours de mon alternance j'ai du réaliser une supervision d'un outils et réaliser une supervision des métriques à l'aide de Grafana, il s'est avérer que la supervision n'est pas idéale et aurait nécessité un outil alternatif pour visualier les informations avec un autre outil",
