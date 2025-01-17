@@ -18,7 +18,7 @@
                 Je souhaiterai poursuivre mes études en école d'ingénieur en alternance !
             </p>
         </section>
-        <section class="none w-full flex flex-col items-center bg-zinc-700">
+        <section class="hidden w-full flex flex-col items-center bg-zinc-700">
             <h2 class="text-black text-4xl ">Mes réseaux</h2>
             <div class="flex flex-row justify-center">
                 <NuxtLink class="w-40 h-40 flex items-center justify-center rounded-full border-4 border-amber-400 " to="https://github.com/gpuill">
