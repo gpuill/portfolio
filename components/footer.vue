@@ -8,9 +8,7 @@
             <NuxtLink to="/competences">
                 <span>Compétences</span>
             </NuxtLink>
-            <NuxtLink to="/Contact">
-                <span>Contact</span>
-            </NuxtLink>
+
         </div>
         <div class="media_wrap">
             <NuxtLink to="https://github.com/gpuill">
@@ -24,6 +22,9 @@
 </template>
 <script>
 /*
+            <NuxtLink to="/Contact">
+                <span>Contact</span>
+            </NuxtLink>
             <NuxtLink to="/about">
                 <span>À propos</span>
             </NuxtLink>

@@ -4,7 +4,7 @@
             <UIcon :name="`${logo}`" class="w-12 h-12" />  
             <h2 :id="`${id}`" class="text-xl font-bold md:text-2xl">{{ nom }}</h2>
         </div>
-        <p class="text-base font-medium md:text-lg">{{ résumé }}</p>
+        <p class="text-base font-medium md:text-lg text-slate-100">{{ résumé }}</p>
     </div>
 </template>
 
