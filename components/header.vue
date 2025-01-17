@@ -52,12 +52,6 @@ const links_horizontal = [
         linkClass:'hover:text-primary',
     },
     {
-        label: 'Compétences',
-        to: '/competences',
-        labelClass:'text-xl',
-        linkClass:'hover:text-primary',
-    },
-    {
         avatar: {
             src:'/static/images/logo_guillaume.svg',
             as:'img',
@@ -67,13 +61,21 @@ const links_horizontal = [
         to: '/',
     },
     {
+        label: 'Compétences',
+        to: '/competences',
+        labelClass:'text-xl',
+        linkClass:'hover:text-primary',
+    }
+    
+]
+/*,
+    {
         label: 'Contact',
         to: '/contact',
         labelClass:'text-xl',
         linkClass:'hover:text-primary',
     }
-]
-/*,
+,
     {
         label: 'À propos',
         to: '/about',

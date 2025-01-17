@@ -8,7 +8,7 @@
             </div>
         </section>
         <section class="w-full p-16">
-            <h3 class="flex flex-row gap-2 not-italic text-4xl underline text-amber-600">
+            <h3 class="flex flex-row gap-2 not-italic text-4xl text-amber-600">
                 Bonjour et bienvenue sur mon site ! 
             </h3>
             <p class="text-2xl px-32 py-16">
