@@ -31,7 +31,6 @@
                 padded
                 @click="isOpen = false"
                 />
-                <Placeholder class="h-full" />
                 <UVerticalNavigation :links="links_vertical" @click="isOpen = false"/>
             </div>
         </USlideover>
@@ -66,6 +65,14 @@ const links_horizontal = [
         labelClass:'text-xl',
         linkClass:'hover:text-primary',
     }
+    ,
+    {
+        label: 'À propos',
+        to: '/about',
+        labelClass:'text-xl',
+        linkClass:'hover:text-primary',
+    }
+    
     
 ]
 /*

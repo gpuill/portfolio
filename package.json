@@ -17,6 +17,9 @@
     "@nuxt/ui": "^2.19.2",
     "@nuxthub/core": "^0.8.10",
     "nuxt": "^3.14.1592",
+    "nuxt-aos": "^1.2.5",
+    "scrollmagic": "^2.0.8",
+    "v-gsap-nuxt": "^1.3.4",
     "vue": "latest",
     "vue-router": "latest"
   },
