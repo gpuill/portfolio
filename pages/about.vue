@@ -75,7 +75,6 @@ onMounted(() => {
                     end: "top 30%",
                     scrub: true, // Animation liée au scroll
                     toggleActions: "play none none reverse",
-                    markers:true,
                 }
             }
         );
