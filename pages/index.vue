@@ -81,11 +81,11 @@ onMounted(() => {
     gsap.to(".background-wave", {
         scrollTrigger: {
             trigger: "main",
-            scrub: 1,
+            scrub: 0.5,
             start: "top top",
             end: "bottom top"
         },
-        y: "-100vh", // Fait monter la vague progressivement
+        y: "10vh", // Fait monter la vague progressivement
         ease: "none"
     });
 
@@ -93,11 +93,10 @@ onMounted(() => {
     gsap.to("#movingObject", {
         scrollTrigger: {
             trigger: "#wavePath",
-            scrub: 1,
+            scrub: 0.5,
             start: "top bottom",
             end: "top 10%",
             toggleActions: "play none none reverse",
-            markers: true
         },
         motionPath: {
             path: "#wavePath",
