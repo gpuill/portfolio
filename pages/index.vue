@@ -1,5 +1,5 @@
 <template>
-    <main class="flex flex-col justify-center">
+    <main class="flex flex-col ">
         <section class="flex flex-row justify-end items-center w-full h-fit p-8 gap-8">
             <div class="flex flex-row gap-2 not-italic text-4xl">
                 <h2 class="not-italic text-4xl text-end">Je suis Guillaume Puill, <strong
@@ -17,20 +17,32 @@
 
         </section>
         <div class="background-wave">
-            <svg width="100%" height="200" viewBox="0 0 800 200" xmlns="http://www.w3.org/2000/svg">
+            <svg id="wave-svg" width="100%" height="200px" viewBox="0 0 3000 200" preserveAspectRatio="none"
+                xmlns="http://www.w3.org/2000/svg">
                 <!-- Vague remplie pour l'aspect visuel -->
                 <path
-                    d="M 0 100 Q 50 50, 100 100 T 200 100 T 300 100 T 400 100 T 500 100 T 600 100 T 700 100 T 800 100 V 200 H 0 Z"
-                    fill="blue" stroke="none" />
+                    d="M 0 100 Q 150 50, 300 100 T 600 100 T 900 100 T 1200 100 T 1500 100 T 1800 100 T 2100 100 T 2400 100 T 2700 100 T 3000 100 V 200 H 0 Z"
+                    fill="#1e3a8aaa" stroke="none" />
 
                 <!-- Chemin utilisé pour GSAP (invisible) -->
                 <path id="wavePath"
-                    d="M 0 100 Q 50 50, 100 100 T 200 100 T 300 100 T 400 100 T 500 100 T 600 100 T 700 100 T 800 100"
-                    fill="none" stroke="red" stroke-width="2" />
-
-                <!-- Objet qui suit le chemin -->
-                <circle id="movingObject" cx="0" cy="100" r="10" fill="red" />
+                    d="M 0 100 Q 150 50, 300 100 T 600 100 T 900 100 T 1200 100 T 1500 100 T 1800 100 T 2100 100 T 2400 100 T 2700 100 T 3000 100"
+                    fill="none" stroke="none" stroke-width="2" />
             </svg>
+            <div id="movingObject">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 48 48">
+                    <defs>
+                        <mask id="ipTPaperShip0">
+                            <g fill="none" stroke="#fff" stroke-linejoin="round" stroke-width="4">
+                                <path fill="#555" stroke-linecap="round"
+                                    d="m4 24l8.571 18L24 29zm40 0l-8.571 18L24 29zM13 42h22L24 29z" />
+                                <path d="M12 26L24 4l12 22" />
+                            </g>
+                        </mask>
+                    </defs>
+                    <path fill="currentColor" d="M0 0h48v48H0z" mask="url(#ipTPaperShip0)" />
+                </svg>
+            </div>
             <div class="background">
 
             </div>
@@ -59,11 +71,11 @@ useHead({
 
 onMounted(() => {
 
-        /* gsap.from(".texte", {
-        text: "", // Commence vide
-        duration: 2,
-        ease: "power1.out"
-    }); */
+    /* gsap.from(".texte", {
+    text: "", // Commence vide
+    duration: 2,
+    ease: "power1.out"
+}); */
 
     // Fait monter la vague avec le scroll
     gsap.to(".background-wave", {
@@ -73,25 +85,26 @@ onMounted(() => {
             start: "top top",
             end: "bottom top"
         },
-        y: "-50vh", // Fait monter la vague progressivement
+        y: "-100vh", // Fait monter la vague progressivement
         ease: "none"
     });
 
     // Fait bouger un élément (ex: un cercle) sur la vague
     gsap.to("#movingObject", {
         scrollTrigger: {
-            trigger: ".background-wave",
+            trigger: "#wavePath",
             scrub: 1,
-            start: "top top",
-            end: "bottom top"
+            start: "top bottom",
+            end: "top 10%",
+            toggleActions: "play none none reverse",
+            markers: true
         },
         motionPath: {
             path: "#wavePath",
             align: "#wavePath",
-            alignOrigin: [0.5, 0.5],
+            alignOrigin: [0.5, 0.7],
             autoRotate: true
         },
-        duration: 3,
         ease: "power1.inOut"
     });
 });
