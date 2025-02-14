@@ -4,11 +4,14 @@ $base-ecriture-fond-noir: #fefefe;
 footer{
     width: 100%;
     padding: 10vh 10vw;
+    z-index: 15;
     display: grid;
     align-content: center;
     &>div{
-        display: flex;
-        
+        display: flex;        
+    }
+    &>*{
+        z-index: 16;
     }
     .menu_wrap{
         display: flex;

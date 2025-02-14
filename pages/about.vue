@@ -1,15 +1,23 @@
 <template>
     <main style="place-content: center; place-items: center;">
-        <div class="remplissage"></div>
+        <div class="">
+
+        </div>
+        <div class="remplissage">
+            <p class="texte">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et dolore tenetur laborum officia deleniti dolorum distinctio deserunt libero accusamus tempora!
+            </p>
+        </div>
+
         <div class="box-timeline">
 
             <div class="ligne"></div>
 
 
             <div class="round r1" data-anim="1">🔥</div>
-            <div class="round r2" data-anim="2">🧮 </div>
-            <div class="round r3" data-anim="3">👟 </div>
-            <div class="round r4" data-anim="4">💢 </div>
+            <div class="round r2" data-anim="2">🧮</div>
+            <div class="round r3" data-anim="3">👟</div>
+            <div class="round r4" data-anim="4">💢</div>
 
             <div class="box b1" data-anim="1">
                 <h2>Lorem ipsum dolor sit amet.</h2>
@@ -50,8 +58,10 @@
 import { ref, onMounted, onUnmounted } from "vue";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
+import TextPlugin from "gsap/TextPlugin";
 
-gsap.registerPlugin(ScrollTrigger); // 🔥 Enregistrer le plugin ici !
+
+gsap.registerPlugin(ScrollTrigger,TextPlugin); 
 
 
 useHead({
@@ -60,6 +70,13 @@ useHead({
 
 
 onMounted(() => {
+
+
+    gsap.from(".texte", {
+        text: "", // Commence vide
+        duration: 2,
+        ease: "power1.out"
+    });
     const boxes = document.querySelectorAll(".box");
     
     boxes.forEach((box, index) => {
@@ -72,7 +89,7 @@ onMounted(() => {
                 scrollTrigger: {
                     trigger: box,
                     start: "top 90%",
-                    end: "top 30%",
+                    end: "top 50%",
                     scrub: true, // Animation liée au scroll
                     toggleActions: "play none none reverse",
                 }

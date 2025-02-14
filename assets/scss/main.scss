@@ -4,9 +4,18 @@ $base-ecriture-fond-noir: #fefefe;
 
 body{
     margin: 0px;
-    
+
     main{
         min-height: 90vh;
+        padding-top: 120px;
+        height: 200vh;
+        position: relative;
+        z-index: 0;
+        overflow: hidden;
+
+        & > *{
+            z-index: 5;
+        }
     }
 
     h1{
@@ -22,8 +31,39 @@ body{
         margin: 0;
     }
 
-    .reseaux{
-        background: rgb(228,228,231);
-        background: linear-gradient(180deg, rgba(228,228,231,1) 0%, rgba(228,228,231,1) 88%, rgba(30,58,138,1) 100%);
+    .background-wave{
+        width: 100vw;
+        height: 100%;
+        position: absolute;
+        bottom: -100vh;
+        left: 0;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+
+        #movingObject {
+            position: absolute;
+            width: 32px;
+            height: 32px;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+        }
+        
+
+        #wave-svg{
+            width: 100%;
+            height: auto;
+            position: relative;
+        }
+
+        .background{
+            background-color: #1e3a8aaa;
+            width: 100%;
+            height: 100%;
+            bottom: 0;
+            z-index: -1;
+        }
     }
 }
