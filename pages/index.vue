@@ -2,7 +2,7 @@
     <main class="flex flex-col ">
         <section class="flex flex-row justify-end items-center w-full h-fit p-8 gap-8">
             <div class="flex flex-row gap-2 not-italic text-4xl">
-                <h2 class="not-italic text-4xl text-end text-primary">DÉVELOPPEUR FULLSTACK</h2>
+                <h2 class="not-italic text-2xl text-end text-primary">DÉVELOPPEUR FULLSTACK</h2>
             </div>
         </section>
         <section class="w-full p-2 sm:p-16">
@@ -15,12 +15,7 @@
             <NuxtImg class="rounded-full" src="/static/images/moi.png" densities="x1 x2" />
 
         </section>
-        <section class="cards-competences">
-            <div class="card-competence c1"></div>
-            <div class="card-competence c2"></div>
-            <div class="card-competence c3"></div>
-            <div class="card-competence c4"></div>
-        </section>
+
         <div class="background-wave">
             <svg id="wave-svg" width="100%" height="200px" viewBox="0 0 3000 200" preserveAspectRatio="none"
                 xmlns="http://www.w3.org/2000/svg">
@@ -30,8 +25,18 @@
                     fill="#1e3a8aaa" stroke="none" />
 
                 <!-- Chemin utilisé pour GSAP (invisible) -->
-                <path id="wavePath"
+                <path id="cheminexemple"
                     d="M 0 100 Q 150 50, 300 100 T 600 100 T 900 100 T 1200 100 T 1500 100 T 1800 100 T 2100 100 T 2400 100 T 2700 100 T 3000 100"
+                    fill="none" stroke="none" stroke-width="2" />
+
+                <path id="wavePath"
+                    d="M 0 100 Q 150 50, 300 100 T 600 100 T 900 100"
+                    fill="none" stroke="none" stroke-width="2" />
+                <path id="wavePath2"
+                    d="M 900 100 Q 1050 150, 1200 100 T 1500 100 T 1800 100 T 2100 100"
+                    fill="none" stroke="none" stroke-width="2" />
+                <path id="wavePath3"
+                    d="M 2100 100 Q 2250 150, 2400 100 T 2700 100 T 3000 100"
                     fill="none" stroke="none" stroke-width="2" />
             </svg>
             <div id="movingObject">
@@ -85,13 +90,17 @@ onMounted(() => {
     // Fait monter la vague avec le scroll
     gsap.to(".background-wave", {
         scrollTrigger: {
-            trigger: "main",
+            trigger: ".background-wave",
             scrub: 1,
-            start: "top top",
-            end: "bottom top"
+            start: "top bottom",
+            end: "top 10%",
+            markers : true
         },
-        y: "10vh", // Fait monter la vague progressivement
-        ease: "none"
+        y: "-90vh", // Fait monter la vague progressivement
+        ease: "none",
+        onComplete: () => {
+            console.log("finished")
+        },
     });
 
     // Fait bouger un élément (ex: un cercle) sur la vague
@@ -100,12 +109,47 @@ onMounted(() => {
             trigger: "#wavePath",
             scrub: 1,
             start: "top bottom",
-            end: "top 10%",
+            end: "top 33%",
             toggleActions: "play none none reverse",
         },
         motionPath: {
             path: "#wavePath",
             align: "#wavePath",
+            alignOrigin: [0.5, 0.5],
+            autoRotate: true
+        },
+        ease: "power1.inOut"
+    });
+
+    gsap.to("#movingObject", {
+        scrollTrigger: {
+            trigger: "#wavePath2",
+            scrub: 1,
+            start: "top 33%",
+            end: "top -45%",
+            toggleActions: "play none none reverse",
+        },
+        motionPath: {
+            path: "#wavePath2",
+            align: "#wavePath2",
+            alignOrigin: [0.5, 0.5],
+            autoRotate: true
+        },
+        ease: "power1.inOut"
+    });
+
+
+    gsap.to("#movingObject", {
+        scrollTrigger: {
+            trigger: "#wavePath3",
+            scrub: 1,
+            start: "bottom -45%",
+            end: "bottom -100%",
+            toggleActions: "play none none reverse",
+        },
+        motionPath: {
+            path: "#wavePath3",
+            align: "#wavePath3",
             alignOrigin: [0.5, 0.5],
             autoRotate: true
         },
