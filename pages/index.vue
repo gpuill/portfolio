@@ -2,8 +2,7 @@
     <main class="flex flex-col ">
         <section class="flex flex-row justify-end items-center w-full h-fit p-8 gap-8">
             <div class="flex flex-row gap-2 not-italic text-4xl">
-                <h2 class="not-italic text-4xl text-end">Je suis Guillaume Puill, <strong
-                        class="text-primary">développeur fullstack</strong></h2>
+                <h2 class="not-italic text-4xl text-end text-primary">DÉVELOPPEUR FULLSTACK</h2>
             </div>
         </section>
         <section class="w-full p-2 sm:p-16">
@@ -15,6 +14,12 @@
             </p>
             <NuxtImg class="rounded-full" src="/static/images/moi.png" densities="x1 x2" />
 
+        </section>
+        <section class="cards-competences">
+            <div class="card-competence c1"></div>
+            <div class="card-competence c2"></div>
+            <div class="card-competence c3"></div>
+            <div class="card-competence c4"></div>
         </section>
         <div class="background-wave">
             <svg id="wave-svg" width="100%" height="200px" viewBox="0 0 3000 200" preserveAspectRatio="none"
@@ -81,7 +86,7 @@ onMounted(() => {
     gsap.to(".background-wave", {
         scrollTrigger: {
             trigger: "main",
-            scrub: 0.5,
+            scrub: 1,
             start: "top top",
             end: "bottom top"
         },
@@ -93,7 +98,7 @@ onMounted(() => {
     gsap.to("#movingObject", {
         scrollTrigger: {
             trigger: "#wavePath",
-            scrub: 0.5,
+            scrub: 1,
             start: "top bottom",
             end: "top 10%",
             toggleActions: "play none none reverse",
@@ -101,7 +106,7 @@ onMounted(() => {
         motionPath: {
             path: "#wavePath",
             align: "#wavePath",
-            alignOrigin: [0.5, 0.7],
+            alignOrigin: [0.5, 0.5],
             autoRotate: true
         },
         ease: "power1.inOut"
