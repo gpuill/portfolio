@@ -45,8 +45,14 @@ const isOpen = ref(false);
 
 const links_horizontal = [
     {
-        label: 'Projets',
-        to: '/projets',
+        label: 'À propos',
+        to: '#about',
+        labelClass:'text-xl',
+        linkClass:'hover:text-primary',
+    },
+    {
+        label: 'Compétences',
+        to: "#competences",
         labelClass:'text-xl',
         linkClass:'hover:text-primary',
     },
@@ -57,18 +63,18 @@ const links_horizontal = [
             imgClass:'rounded-md min-w-16 max-h-20 w-full p-2',
             size:'3xl'
         },
-        to: '/',
+        to: '#accueil',
     },
     {
-        label: 'Compétences',
-        to: '/competences',
+        label: 'Projets',
+        to: '#projets',
         labelClass:'text-xl',
         linkClass:'hover:text-primary',
-    }
-    ,
+    },
+
     {
-        label: 'À propos',
-        to: '/about',
+        label: 'CV',
+        to: '#CV',
         labelClass:'text-xl',
         linkClass:'hover:text-primary',
     }
@@ -94,37 +100,44 @@ const links_horizontal = [
 const links_vertical = [
     {
         label: 'Accueil',
-        to: '/',
+        to: '#accueil',
         labelClass:'text-xl',
         linkClass:'hover:text-primary',
         icon:'heroicons:home-20-solid',
         iconClass:'heroicons:home-20-solid',
     },
     {
+        label: 'À propos',
+        to: '#about',
+        icon:'heroicons:identification-20-solid',
+        labelClass:'text-xl',
+        linkClass:'hover:text-primary',
+    },
+    {
         label: 'Projets',
-        to: '/projets',
+        to: '#projets',
         icon:'heroicons:cpu-chip-20-solid',
         labelClass:'text-xl',
         linkClass:'hover:text-primary',
     },
     {
         label: 'Compétences',
-        to: '/competences',
+        to: '#competences',
         icon:'heroicons:academic-cap-solid',
         labelClass:'text-xl',
         linkClass:'hover:text-primary',
     },
     {
         label: 'Contact',
-        to: '/contact',
+        to: '#contact',
         icon:'heroicons:envelope-20-solid',
         labelClass:'text-xl',
         linkClass:'hover:text-primary',
     },
     {
-        label: 'À propos',
-        to: '/about',
-        icon:'heroicons:identification-20-solid',
+        label: 'CV',
+        to: '#CV',
+        icon:'heroicons:user-circle-20-solid',
         labelClass:'text-xl',
         linkClass:'hover:text-primary',
     }

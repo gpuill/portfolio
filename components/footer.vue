@@ -2,20 +2,20 @@
     <footer class="bg-primary-700">
         <last-commit-portfolio-no-API class="last_commit_footer"/>
         <div class="menu_wrap">
-            <NuxtLink to="/projets">
+            <NuxtLink to="#accueil">
+                <span>Accueil</span>
+            </NuxtLink>
+            <NuxtLink to="#projets">
                 <span>Projets</span>
             </NuxtLink>
-            <NuxtLink to="/competences">
+            <NuxtLink to="#competences">
                 <span>Compétences</span>
             </NuxtLink>
-            <NuxtLink to="/Contact">
-                <span>Contact</span>
-            </NuxtLink>
-            <NuxtLink to="/about">
+            <NuxtLink to="#about">
                 <span>À propos</span>
             </NuxtLink>
-            <NuxtLink to="/lore">
-                <span>Le lore</span>
+            <NuxtLink to="#CV">
+                <span>CV</span>
             </NuxtLink>
         </div>
         <div class="media_wrap">

@@ -1,18 +1,26 @@
 <template>
-    <main class="flex flex-col ">
+    <main id="accueil" class="flex flex-col">
+        <section class="section-intro">
+            <h2>Portfolio</h2>
+            <h1>Guillaume Puill</h1>
+        </section>
         <section class="flex flex-row justify-end items-center w-full h-fit p-8 gap-8">
+            <NuxtImg class="rounded-full" src="/static/images/moi.png" densities="x1 x2" />
             <div class="flex flex-row gap-2 not-italic text-4xl">
                 <h2 class="not-italic text-2xl text-end text-primary">DÉVELOPPEUR FULLSTACK</h2>
             </div>
         </section>
-        <section class="w-full p-2 sm:p-16">
+        <div id="about"></div>
+        <section  class="w-full p-2 sm:p-16">
             <p class="text-2xl px-8 py-2 leading-8">
                 Je m'appelle Guillaume Puill, j'ai 21 ans, je suis actuellement en 3e année de BUT informatique en
                 alternance à l'IUT de Lannion</p>
             <p class="text-4xl px-8 py-2 text-amber-400">
                 Je souhaiterai poursuivre mes études en école d'ingénieur en alternance !
             </p>
-            <NuxtImg class="rounded-full" src="/static/images/moi.png" densities="x1 x2" />
+
+        </section>
+        <section id="competences">
 
         </section>
 
@@ -87,21 +95,23 @@ onMounted(() => {
     ease: "power1.out"
 }); */
 
-    // Fait monter la vague avec le scroll
-    gsap.to(".background-wave", {
+    gsap.fromTo(".background-wave",{
+        y:"95vh",
+    },{
         scrollTrigger: {
             trigger: ".background-wave",
-            scrub: 1,
+            scrub: 0.5,
             start: "top bottom",
-            end: "top 10%",
-            markers : true
+            end: "top -10%",
         },
-        y: "-90vh", // Fait monter la vague progressivement
+        y: "10vh", // Fait monter la vague progressivement
         ease: "none",
         onComplete: () => {
             console.log("finished")
         },
     });
+
+
 
     // Fait bouger un élément (ex: un cercle) sur la vague
     gsap.to("#movingObject", {
