@@ -49,6 +49,16 @@ body{
         }
     }
 
+    @media screen and (max-width:1024px) {
+        #section-intro{
+            h1{
+                font-size: 3rem;
+            }
+            h2{
+                font-size: 4rem;
+            }
+        }
+    }
     #cartePresentation{
         display: flex;
         flex-direction: column;
@@ -73,7 +83,7 @@ body{
             flex-direction: row;
             justify-content: center;
             align-items: center;
-            gap: 12px;
+            gap: 1rem;
             border-radius: 1rem 1rem 7rem;
             img{
                 height: fit-content;
@@ -85,8 +95,33 @@ body{
             }
         }
     }
+
+    @media screen and (max-width:1000px) {
+        #cartePresentation{
+            margin: 1rem 2rem;
+            padding: 1rem 0.25rem 0.25rem 1rem;
+            border-radius: 1rem 1rem 7rem;
+            gap: 0.5rem;
+            h1{
+                font-size: 2rem;
+            }
+            #carteIdentite{
+                div{
+                    h2{
+                        font-size: 1rem;
+                    }
+                }
+            }
+        }
+    }
     /*  GSAP    */
     /*ANIMATION */
+    /* Cacher les éléments dès le départ*/
+    .background-wave, #movingObject {
+        opacity: 0; /* Complètement caché */
+        visibility: hidden; /* Éviter de prendre de la place dans le DOM */
+    }
+
     .background-wave{
         width: 100vw;
         height: 100%;

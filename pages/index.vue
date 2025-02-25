@@ -7,8 +7,8 @@
         <section id="cartePresentation" class="">
             <h1>Qui suis-je ?</h1>
             <div id="carteIdentite">
-                <NuxtImg class="rounded-full" src="/static/images/moi.png" densities="x1 x2" />
-                <div class="flex flex-col gap-4 not-italic text-4xl">
+                <NuxtImg class="rounded-full" src="/static/images/moi.png" densities="x4 x2" />
+                <div class="flex flex-col not-italic">
                     <h2 class="text-primary">Guillaume Puill</h2>
                     <h2 class="text-primary">Développeur Fullstack</h2>
                     <h2 class="text-primary">BUT 3 - IUT Lannion</h2>
@@ -99,6 +99,11 @@ onMounted(() => {
     duration: 2,
     ease: "power1.out"
 }); */
+    gsap.set([".background-wave", "#movingObject"], {
+        opacity: 1,
+        visibility: "visible"
+    });
+
 
     gsap.fromTo(".background-wave",{
         y:"95vh",
