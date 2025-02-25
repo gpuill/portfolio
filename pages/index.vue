@@ -7,7 +7,7 @@
         <section id="cartePresentation" class="">
             <h1>Qui suis-je ?</h1>
             <div id="carteIdentite">
-                <NuxtImg class="rounded-full" src="/static/images/moi.png" densities="x4 x2" />
+                <NuxtImg class="rounded-full w-24 lg:w-56" src="/static/images/moi.png" densities="x1 x2 x4" />
                 <div class="flex flex-col not-italic">
                     <h2 class="text-primary">Guillaume Puill</h2>
                     <h2 class="text-primary">Développeur Fullstack</h2>

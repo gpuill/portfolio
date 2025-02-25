@@ -89,6 +89,7 @@ body{
                 height: fit-content;
             }
             div{
+                overflow: hidden;
                 h2{
                     font-size: 3rem;
                 }
@@ -96,16 +97,17 @@ body{
         }
     }
 
-    @media screen and (max-width:1000px) {
+    @media screen and (max-width:1024px) {
         #cartePresentation{
             margin: 1rem 2rem;
-            padding: 1rem 0.25rem 0.25rem 1rem;
+            padding: 1rem 0.25rem 0.25rem 0.5rem;
             border-radius: 1rem 1rem 7rem;
             gap: 0.5rem;
             h1{
                 font-size: 2rem;
             }
             #carteIdentite{
+
                 div{
                     h2{
                         font-size: 1rem;
