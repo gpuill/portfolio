@@ -107,7 +107,7 @@ onMounted(() => {
             trigger: ".background-wave",
             scrub: 0.5,
             start: "top bottom",
-            end: "top -10%",
+            end: "top -15%",
         },
         y: "10vh", // Fait monter la vague progressivement
         ease: "none",

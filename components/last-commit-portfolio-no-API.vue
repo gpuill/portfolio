@@ -65,7 +65,7 @@ const fetchLastCommit = async () => {
 
         // Récupérer les informations du dernier commit
         if (commit) {
-            lastCommit.value = `Nom: ${commit.commit.message}\nAuteur: ${commit.commit.author.name}\nDate: ${commit.commit.author.date.substring(0,10)}`;
+            lastCommit.value = `Nom: ${commit.commit.message}\nDate: ${commit.commit.author.date.substring(0,10)}`;
         } else {
             lastCommit.value = "Aucun commit trouvé.";
         }
