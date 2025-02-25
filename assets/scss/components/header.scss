@@ -27,6 +27,10 @@ header{
         ul{
             width: 60vw;
             justify-content: space-around ;
+            li{
+                width: max-content;
+                transform: translateX(-50%);
+            }
         }
     }
 }

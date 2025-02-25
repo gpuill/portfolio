@@ -1,13 +1,18 @@
 <template>
     <main id="accueil" class="flex flex-col">
-        <section class="section-intro">
+        <section id="section-intro">
             <h2>Portfolio</h2>
             <h1>Guillaume Puill</h1>
         </section>
-        <section class="flex flex-row justify-end items-center w-full h-fit p-8 gap-8">
-            <NuxtImg class="rounded-full" src="/static/images/moi.png" densities="x1 x2" />
-            <div class="flex flex-row gap-2 not-italic text-4xl">
-                <h2 class="not-italic text-2xl text-end text-primary">DÉVELOPPEUR FULLSTACK</h2>
+        <section id="cartePresentation" class="">
+            <h1>Qui suis-je ?</h1>
+            <div id="carteIdentite">
+                <NuxtImg class="rounded-full" src="/static/images/moi.png" densities="x1 x2" />
+                <div class="flex flex-col gap-4 not-italic text-4xl">
+                    <h2 class="text-primary">Guillaume Puill</h2>
+                    <h2 class="text-primary">Développeur Fullstack</h2>
+                    <h2 class="text-primary">BUT 3 - IUT Lannion</h2>
+                </div>
             </div>
         </section>
         <div id="about"></div>
