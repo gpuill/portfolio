@@ -7,23 +7,23 @@
         <section id="cartePresentation" class="">
             <h1>Qui suis-je ?</h1>
             <div id="carteIdentite">
-                <NuxtImg class="rounded-full w-24 lg:w-56" src="/static/images/moi.png" densities="x1 x2 x4" />
+                <NuxtImg class="rounded-full w-24 lg:w-56" src="/static/images/moi.png" densities="x1 x2" />
                 <div class="flex flex-col not-italic">
-                    <h2 class="text-primary">Guillaume Puill</h2>
-                    <h2 class="text-primary">Développeur Fullstack</h2>
-                    <h2 class="text-primary">BUT 3 - IUT Lannion</h2>
+                    <h2 class="text-primary">Guillaume Puill - 21 ans</h2>
+                    <h2 class="">Développeur Fullstack</h2>
+                    <h2 class="">BUT 3 - IUT Lannion</h2>
                 </div>
             </div>
         </section>
         <div id="about"></div>
-        <section  class="w-full p-2 sm:p-16">
+        <section class="w-full p-2 sm:p-16">
+
             <p class="text-2xl px-8 py-2 leading-8">
                 Je m'appelle Guillaume Puill, j'ai 21 ans, je suis actuellement en 3e année de BUT informatique en
                 alternance à l'IUT de Lannion</p>
             <p class="text-4xl px-8 py-2 text-amber-400">
                 Je souhaiterai poursuivre mes études en école d'ingénieur en alternance !
             </p>
-
         </section>
         <section id="competences">
 
@@ -35,7 +35,7 @@
                 <!-- Vague remplie pour l'aspect visuel -->
                 <path
                     d="M 0 100 Q 150 50, 300 100 T 600 100 T 900 100 T 1200 100 T 1500 100 T 1800 100 T 2100 100 T 2400 100 T 2700 100 T 3000 100 V 200 H 0 Z"
-                    fill="#1e3a8aaa" stroke="none" />
+                    fill="#187FFFaa" stroke="none" />
 
                 <!-- Chemin utilisé pour GSAP (invisible) -->
                 <path id="cheminexemple"
@@ -88,7 +88,7 @@ gsap.registerPlugin(ScrollTrigger, TextPlugin, MotionPathPlugin);
 useHead({
     title: 'Portfolio - accueil',
     meta: [
-        { name: 'description', content: 'Je m\'appelle Guillaume PUILL, je fais des études en informatiques, ceci est mon portfolio ou j\'y présente mes projets, compétences travailler au cours des mes études et de mon travail.' }
+        { name: 'description', content: 'Je m\'appelle Guillaume PUILL, je fais des études en informatiques, ceci est mon portfolio ou j\'y présente mes projets, les compétences que j\'ai développées au cours des mes études et de mon travail.' }
     ]
 });
 
@@ -114,7 +114,7 @@ onMounted(() => {
             start: "top bottom",
             end: "top -15%",
         },
-        y: "10vh", // Fait monter la vague progressivement
+        y: "12vh", // Fait monter la vague progressivement
         ease: "none",
         onComplete: () => {
             console.log("finished")

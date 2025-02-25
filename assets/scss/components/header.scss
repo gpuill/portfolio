@@ -1,12 +1,11 @@
-$base-noir-1-flou: #222222be;
-$base-noir-1: #222222;
+$base-noir-1-flou: #2f2f2fbe;
+$base-noir-1: #2c2c2c;
 $base-ecriture-fond-noir: #fefefe;
 $layout-breakpoint-small: 768px;
 
 
 
 header{
-
     position: fixed;
     top: 0;
     left: 0;
@@ -20,7 +19,6 @@ header{
     display: flex;
     flex-direction: row;
     justify-content: center;
-
     nav.horizontalNaviagationes{
         justify-content: center;
         width: 80vw;

@@ -20,10 +20,10 @@
         </div>
         <div class="media_wrap">
             <NuxtLink to="https://github.com/gpuill">
-                <img src="/static/images/icons/github-icon.svg" alt="Github personnel">
+                <img class="w-16 lg:w-20" src="/static/images/icons/github-icon.svg" alt="Github personnel">
             </NuxtLink>
             <NuxtLink to="https://www.linkedin.com/in/guillaume-puill-295021262/">
-                <img src="/static/images/icons/linkedin-icon.svg" alt="Linkedin">
+                <img class="w-16 lg:w-20" src="/static/images/icons/linkedin-icon.svg" alt="Linkedin">
             </NuxtLink>
 
         </div>
