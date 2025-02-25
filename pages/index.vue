@@ -4,6 +4,7 @@
             <h2>Portfolio</h2>
             <h1>Guillaume Puill</h1>
         </section>
+        <div id="about"></div>
         <section id="cartePresentation" class="">
             <h1>Qui suis-je ?</h1>
             <div id="carteIdentite">
@@ -15,7 +16,6 @@
                 </div>
             </div>
         </section>
-        <div id="about"></div>
         <section class="w-full p-2 sm:p-16">
 
             <p class="text-2xl px-8 py-2 leading-8">
@@ -114,7 +114,7 @@ onMounted(() => {
             start: "top bottom",
             end: "top -15%",
         },
-        y: "12vh", // Fait monter la vague progressivement
+        y: "130px", // Fait monter la vague progressivement
         ease: "none",
         onComplete: () => {
             console.log("finished")
