@@ -10,7 +10,7 @@ gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
     <NuxtRouteAnnouncer />
     <NuxtLoadingIndicator />
     <Header />
-    <NuxtPage style="background-color: #060D3D;"/>
+    <NuxtPage style="background-color: #fefff5;"/>
     <Footer />
 </template>
 

@@ -1,150 +1,19 @@
 <template>
-    <header class="">
-        <UHorizontalNavigation :links="links_horizontal" class="hidden horizontalNaviagationes lg:flex hover:text-primary" />
-        <NuxtLink class="flex lg:hidden" to="/">
-                    <NuxtImg
-                    preload 
-                    class="min-w-16 max-h-24 w-full p-2"
-                    src="/static/images/logo_guillaume.svg"
-                    densities="x1"
-                    loading="lazy"
-                    />
-                </NuxtLink>
-        <UButton
-            icon="heroicons:bars-3-bottom-right-20-solid"
-            size="xl"
-            class="flex lg:hidden h-fit w-fit absolute end-10 top-8 z-10"
-            color="primary"
-            square
-            variant="solid"
-            @click="isOpen = true"
-        />
-        <USlideover v-model="isOpen">
-            <div class="py-20 px-4 flex-1">
-                <UButton
-                color="gray"
-                variant="ghost"
-                size="xl"
-                icon="i-heroicons-x-mark-20-solid"
-                class="flex lg:hidden absolute end-5 top-5 z-10"
-                square
-                padded
-                @click="isOpen = false"
-                />
-                <UVerticalNavigation :links="links_vertical" @click="isOpen = false"/>
-            </div>
-        </USlideover>
+    <header class="fixed top-0 left-0 w-full flex flex-row justify-center z-1000 p-4"> 
+        <nav class="flex flex-row justify-center items-center gap-4 w-fit bg-zinc-950 px-8 py-2 rounded-2xl">
+            <img src="~/assets/logo/logo_guillaume.svg" class="w-20 h-20" alt=""/>
+        </nav>
 
     </header>
 </template>
 
 <script setup>
-import { ref } from "vue";
+import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
+import TextPlugin from "gsap/TextPlugin";
+import MotionPathPlugin from "gsap/MotionPathPlugin";
 
-const isOpen = ref(false);
 
-const links_horizontal = [
-    {
-        label: 'À propos',
-        to: '#about',
-        labelClass:'text-xl',
-        linkClass:'hover:text-primary',
-    },
-    {
-        label: 'Compétences',
-        to: "#competences",
-        labelClass:'text-xl',
-        linkClass:'hover:text-primary',
-    },
-    {
-        avatar: {
-            src:'/static/images/logo_guillaume.svg',
-            as:'img',
-            imgClass:'rounded-md min-w-16 max-h-20 w-full p-2',
-            size:'3xl'
-        },
-        to: '#accueil',
-    },
-    {
-        label: 'Projets',
-        to: '#projets',
-        labelClass:'text-xl',
-        linkClass:'hover:text-primary',
-    },
-
-    {
-        label: 'CV',
-        to: '#CV',
-        labelClass:'text-xl',
-        linkClass:'hover:text-primary',
-    }
-    
-    
-]
-/*
-,
-    {
-        label: 'Contact',
-        to: '/contact',
-        labelClass:'text-xl',
-        linkClass:'hover:text-primary',
-    }
-,
-    {
-        label: 'À propos',
-        to: '/about',
-        labelClass:'text-xl',
-        linkClass:'hover:text-primary',
-    }
-        */
-const links_vertical = [
-    {
-        label: 'Accueil',
-        to: '#accueil',
-        labelClass:'text-xl',
-        linkClass:'hover:text-primary',
-        icon:'heroicons:home-20-solid',
-        iconClass:'heroicons:home-20-solid',
-    },
-    {
-        label: 'À propos',
-        to: '#about',
-        icon:'heroicons:identification-20-solid',
-        labelClass:'text-xl',
-        linkClass:'hover:text-primary',
-    },
-    {
-        label: 'Projets',
-        to: '#projets',
-        icon:'heroicons:cpu-chip-20-solid',
-        labelClass:'text-xl',
-        linkClass:'hover:text-primary',
-    },
-    {
-        label: 'Compétences',
-        to: '#competences',
-        icon:'heroicons:academic-cap-solid',
-        labelClass:'text-xl',
-        linkClass:'hover:text-primary',
-    },
-    {
-        label: 'Contact',
-        to: '#contact',
-        icon:'heroicons:envelope-20-solid',
-        labelClass:'text-xl',
-        linkClass:'hover:text-primary',
-    },
-    {
-        label: 'CV',
-        to: '#CV',
-        icon:'heroicons:user-circle-20-solid',
-        labelClass:'text-xl',
-        linkClass:'hover:text-primary',
-    }
-]
+gsap.registerPlugin(ScrollTrigger, TextPlugin, MotionPathPlugin);
 
 </script>
-
-<style lang="scss">
-@use "~/assets/scss/components/header.scss"
-</style>

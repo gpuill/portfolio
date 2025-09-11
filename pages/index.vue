@@ -75,8 +75,7 @@
 </template>
 
 <script setup>
-import { useHead } from '@vueuse/head';
-import { ref, onMounted, onUnmounted } from "vue";
+import { onMounted, onUnmounted } from "vue";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import TextPlugin from "gsap/TextPlugin";
@@ -88,7 +87,7 @@ gsap.registerPlugin(ScrollTrigger, TextPlugin, MotionPathPlugin);
 useHead({
     title: 'Portfolio - accueil',
     meta: [
-        { name: 'description', content: 'Je m\'appelle Guillaume PUILL, je fais des études en informatiques, ceci est mon portfolio ou j\'y présente mes projets, les compétences que j\'ai développées au cours des mes études et de mon travail.' }
+        { name: 'description', content: 'Portfolio de Guillaume PUILL' }
     ]
 });
 

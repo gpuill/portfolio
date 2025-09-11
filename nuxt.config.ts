@@ -1,4 +1,4 @@
-import colors from 'tailwindcss/colors'
+import tailwindcss from "@tailwindcss/vite";
 
 export default defineNuxtConfig({
   app: {
@@ -14,12 +14,10 @@ export default defineNuxtConfig({
   colorMode:{
     preference:'dark',
   },
-  compatibilityDate: '2024-11-01',
+  compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
   modules: [
-    '@nuxt/content',
     '@nuxt/ui',
-    '@nuxtjs/tailwindcss',
     '@nuxt/fonts',
     '@nuxthub/core',
     '@nuxt/image',
@@ -32,18 +30,10 @@ export default defineNuxtConfig({
       
     }
   },
-  tailwindcss:{
-    config:{
-      theme: {
-        extend: {
-          colors: {
-              primary: colors.blue,
-              secondary: colors.amber,
-              neutral: colors.gray
-          }
-        }
-      }
-    }
+  css: ['~/assets/main.css'],
+  vite: {
+    plugins:[
+      tailwindcss(),
+    ],
   },
-
 })

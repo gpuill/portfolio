@@ -1,8 +1,3 @@
-
-
-
-
-
 export default defineEventHandler(async (event) => {
     interface JsonMaster{
         object:{
