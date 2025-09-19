@@ -23,6 +23,11 @@ export default defineNuxtConfig({
     '@nuxt/image',
     '@nuxt/icon'
   ],
+  nitro:{
+    experimental:{
+      openAPI: true
+    }
+  },
   runtimeConfig: {
     // Variables accessibles uniquement côté serveur
     githubToken: process.env.GITHUB_API_TOKEN,
