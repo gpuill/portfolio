@@ -2,6 +2,14 @@
 export default defineEventHandler(async (event) => {
   const config = useRuntimeConfig()
   
+  // Debug temporaire
+  console.log('Token présent:', !!config.githubToken)
+  console.log('Token length:', config.githubToken?.length || 0)
+  
+  if (!config.githubToken) {
+    return { error: 'Token GitHub non configuré' }
+  }
+  
   try {
     const response = await fetch('https://api.github.com/repos/gpuill/portfolio/commits?per_page=1', {
       headers: {
@@ -10,8 +18,12 @@ export default defineEventHandler(async (event) => {
       }
     })
     
+    console.log('GitHub API Status:', response.status)
+    
     if (!response.ok) {
-      throw new Error('Erreur API GitHub')
+      const errorText = await response.text()
+      console.log('GitHub API Error:', errorText)
+      throw new Error(`GitHub API Error: ${response.status}`)
     }
     
     const commits = await response.json()
@@ -21,6 +33,7 @@ export default defineEventHandler(async (event) => {
       sha: commits[0]?.sha?.substring(0, 7)
     }
   } catch (error) {
-    return { error: 'Impossible de récupérer le dernier commit' }
+    console.error('Erreur complète:', error)
+    return { error: `Erreur: ${error.message}` }
   }
 })

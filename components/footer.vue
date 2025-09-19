@@ -1,5 +1,5 @@
 <template>
-    <footer class="bg-blue-700">
+    <footer class="bg-zinc-100">
         <last-commit/>
     </footer>
 </template>
