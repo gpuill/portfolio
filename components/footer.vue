@@ -1,7 +1,6 @@
 <template>
-    <footer class="bg-primary-700">
-        <last-commit-portfolio-no-API class="last_commit_footer"/>
-
+    <footer class="bg-blue-700">
+        <last-commit/>
     </footer>
 </template>
 <script>

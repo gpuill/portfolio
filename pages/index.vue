@@ -42,15 +42,12 @@
                     d="M 0 100 Q 150 50, 300 100 T 600 100 T 900 100 T 1200 100 T 1500 100 T 1800 100 T 2100 100 T 2400 100 T 2700 100 T 3000 100"
                     fill="none" stroke="none" stroke-width="2" />
 
-                <path id="wavePath"
-                    d="M 0 100 Q 150 50, 300 100 T 600 100 T 900 100"
-                    fill="none" stroke="none" stroke-width="2" />
-                <path id="wavePath2"
-                    d="M 900 100 Q 1050 150, 1200 100 T 1500 100 T 1800 100 T 2100 100"
-                    fill="none" stroke="none" stroke-width="2" />
-                <path id="wavePath3"
-                    d="M 2100 100 Q 2250 150, 2400 100 T 2700 100 T 3000 100"
-                    fill="none" stroke="none" stroke-width="2" />
+                <path id="wavePath" d="M 0 100 Q 150 50, 300 100 T 600 100 T 900 100" fill="none" stroke="none"
+                    stroke-width="2" />
+                <path id="wavePath2" d="M 900 100 Q 1050 150, 1200 100 T 1500 100 T 1800 100 T 2100 100" fill="none"
+                    stroke="none" stroke-width="2" />
+                <path id="wavePath3" d="M 2100 100 Q 2250 150, 2400 100 T 2700 100 T 3000 100" fill="none" stroke="none"
+                    stroke-width="2" />
             </svg>
             <div id="movingObject">
                 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 48 48">
@@ -67,7 +64,18 @@
                 </svg>
             </div>
             <div class="background">
+                <div id="curved-corner-bottomleft">
 
+                </div>
+                <div id="curved-corner-topleft">
+
+                </div>
+                <div id="curved-corner-bottomright">
+
+                </div>
+                <div id="curved-corner-topright">
+
+                </div>
             </div>
         </div>
 
@@ -75,111 +83,134 @@
 </template>
 
 <script setup>
-import { onMounted, onUnmounted } from "vue";
-import gsap from "gsap";
-import ScrollTrigger from "gsap/ScrollTrigger";
-import TextPlugin from "gsap/TextPlugin";
-import MotionPathPlugin from "gsap/MotionPathPlugin";
+import { onMounted, onUnmounted } from "vue"
+import gsap from "gsap"
+import ScrollTrigger from "gsap/ScrollTrigger"
+import MotionPathPlugin from "gsap/MotionPathPlugin"
 
-
-gsap.registerPlugin(ScrollTrigger, TextPlugin, MotionPathPlugin);
-
-useHead({
-    title: 'Portfolio - accueil',
-    meta: [
-        { name: 'description', content: 'Portfolio de Guillaume PUILL' }
-    ]
-});
+gsap.registerPlugin(ScrollTrigger, MotionPathPlugin)
 
 onMounted(() => {
+    const wave = document.querySelector < HTMLElement > (".background-wave")
+    const mover = document.querySelector < HTMLElement > ("#movingObject")
+    if (!wave || !mover) return
 
-    /* gsap.from(".texte", {
-    text: "", // Commence vide
-    duration: 2,
-    ease: "power1.out"
-}); */
-    gsap.set([".background-wave", "#movingObject"], {
-        opacity: 1,
-        visibility: "visible"
-    });
+    // Optionnel: garantir un état clean côté SSR/responsive
+    ScrollTrigger.saveStyles([".background-wave", "#movingObject"])
 
+    // 1) Toujours fixer la vague en bas du viewport (même si on est déjà scrollé)
+    const placeAtBottom = () => {
+        gsap.set(wave, {
+            position: "fixed",
+            left: 0,
+            right: 0,
+            bottom: 0,
+            width: "100vw",
+            clearProps: "y,x,top" // au cas où des styles précédents trainent
+        })
+    }
 
-    gsap.fromTo(".background-wave",{
-        y:"95vh",
-    },{
+    // 2) Cacher -> révéler une fois que ScrollTrigger a fini son refresh
+    gsap.set([wave, mover], { autoAlpha: 0, visibility: "hidden" })
+
+    // Recalage AVANT le calcul des triggers
+    ScrollTrigger.addEventListener("refreshInit", placeAtBottom)
+
+    // Révélation APRÈS calcul (layout OK, positions stables)
+    ScrollTrigger.addEventListener("refresh", () => {
+        placeAtBottom()
+        gsap.to([wave, mover], { autoAlpha: 1, duration: 0.2, overwrite: true })
+    })
+
+    // 3) Timeline de ta vague
+    //    - immediateRender:false => n’injecte pas l’état "from" si on n’est pas au tout début
+    //    - invalidateOnRefresh:true => recalcule tout si le viewport change
+    const tl = gsap.timeline({
+        defaults: { ease: "none", immediateRender: false },
         scrollTrigger: {
-            trigger: ".background-wave",
-            scrub: 0.5,
-            start: "top bottom",
-            end: "top -15%",
-        },
-        y: "130px", // Fait monter la vague progressivement
-        ease: "none",
-        onComplete: () => {
-            console.log("finished")
-        },
-    });
+            trigger: document.documentElement, // toute la page
+            start: "top top",
+            end: "bottom bottom",
+            scrub: 0.6,
+            invalidateOnRefresh: true
+        }
+    })
 
-
-
-    // Fait bouger un élément (ex: un cercle) sur la vague
-    gsap.to("#movingObject", {
-        scrollTrigger: {
-            trigger: "#wavePath",
-            scrub: 1,
-            start: "top bottom",
-            end: "top 33%",
-            toggleActions: "play none none reverse",
-        },
+    // 👇 Si tu as plusieurs segments (#wavePath, #wavePath2, #wavePath3)
+    tl.to("#movingObject", {
         motionPath: {
-            path: "#wavePath",
-            align: "#wavePath",
-            alignOrigin: [0.5, 0.5],
-            autoRotate: true
-        },
-        ease: "power1.inOut"
-    });
+            path: ["#wavePath", "#wavePath2", "#wavePath3"],
+            align: ["#wavePath", "#wavePath2", "#wavePath3"],
+            autoRotate: true,
+            alignOrigin: [0.5, 0.5]
+        }
+    })
 
-    gsap.to("#movingObject", {
-        scrollTrigger: {
-            trigger: "#wavePath2",
-            scrub: 1,
-            start: "top 33%",
-            end: "top -45%",
-            toggleActions: "play none none reverse",
-        },
-        motionPath: {
-            path: "#wavePath2",
-            align: "#wavePath2",
-            alignOrigin: [0.5, 0.5],
-            autoRotate: true
-        },
-        ease: "power1.inOut"
-    });
+    // 4) Rafraîchir quand tout est chargé (images, fonts) + un rAF de sécurité
+    const doRefresh = () => requestAnimationFrame(() => ScrollTrigger.refresh())
+    if (document.readyState === "complete") {
+        doRefresh()
+    } else {
+        window.addEventListener("load", doRefresh, { once: true })
+    }
 
+    // 5) Clean-up en sortie (changement de page/layout)
+    onUnmounted(() => {
+        // Tue uniquement ce qu’on a créé ici
+        tl.scrollTrigger?.kill()
+        tl.kill()
+        // Retire les listeners (important si composant réutilisé)
+        ScrollTrigger.removeEventListener("refreshInit", placeAtBottom)
+    })
+})
 
-    gsap.to("#movingObject", {
-        scrollTrigger: {
-            trigger: "#wavePath3",
-            scrub: 1,
-            start: "bottom -45%",
-            end: "bottom -100%",
-            toggleActions: "play none none reverse",
-        },
-        motionPath: {
-            path: "#wavePath3",
-            align: "#wavePath3",
-            alignOrigin: [0.5, 0.5],
-            autoRotate: true
-        },
-        ease: "power1.inOut"
-    });
-});
-
-
-onUnmounted(() => {
-    ScrollTrigger.getAll().forEach(trigger => trigger.kill());
-    gsap.globalTimeline.clear();
-});
 
 </script>
+
+<style>
+#curved-corner-bottomleft,
+#curved-corner-bottomright,
+#curved-corner-topleft,
+#curved-corner-topright {
+    width: 150px;
+    height: 50px;
+    overflow: hidden;
+    position: relative;
+}
+
+#curved-corner-bottomleft:before,
+#curved-corner-bottomright:before,
+#curved-corner-topleft:before,
+#curved-corner-topright:before {
+    content: "";
+    display: block;
+    width: 200%;
+    height: 200%;
+    position: absolute;
+    border-radius: 50%;
+}
+
+#curved-corner-bottomleft:before {
+    bottom: 0;
+    left: 0;
+    box-shadow: -50px 50px 0 0 #F5DCD5;
+}
+
+#curved-corner-bottomright:before {
+    bottom: 0;
+    right: 0;
+    box-shadow: 50px 50px 0 0 #F5DCD5;
+}
+
+#curved-corner-topleft:before {
+    top: 0;
+    left: 0;
+    box-shadow: -50px -50px 0 0 #F5DCD5;
+}
+
+#curved-corner-topright:before {
+    top: 0;
+    right: 0;
+    box-shadow: 50px -50px 0 0 #F5DCD5;
+}
+</style>
