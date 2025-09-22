@@ -1,10 +1,13 @@
 // server/api/last-commit.js
 export default defineEventHandler(async (event) => {
+
+  const token = await fetch('/api/getGitToken')
+
   const config = useRuntimeConfig()
   
   // Debug temporaire
-  console.log('Token présent:', !!config.githubToken)
-  console.log('Token length:', config.githubToken?.length || 0)
+  console.log('Token présent:', !!token)
+  console.log('Token length:', token?.length || 0)
   
   if (!config.githubToken) {
     return { error: 'Token GitHub non configuré' }
