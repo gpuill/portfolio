@@ -22,10 +22,10 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 22
-          cache: 'npm'
+          cache: 'pnpm'
 
       - name: Install pnpm
-        run : npm install -g pnpm@latest-10
+        run : pnpm install -g pnpm@latest-10
 
       - name: Install dependencies
         run: pnpm install
