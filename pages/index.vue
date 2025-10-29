@@ -1,6 +1,6 @@
 <template>
     <main id="accueil" class="flex flex-col">
-        <ColorBends class-name="fond" style="" :colors="['#ff5c7a', '#8a5cff', '#00ffd1']" :rotation="0" :speed="0.3"
+        <ColorBends class-name="fond" style="" :colors="['#ff5c7a', '#F0C91C','#8a5cff', '#00ffd1']" :rotation="0" :speed="0.3"
             :scale="0.2" :frequency="1.7" :warpStrength="1" :mouseInfluence="0.8" :parallax="0.5" :noise="0.08"
             transparent />
         <section id="section-intro">
